@@ -174,11 +174,19 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         [InlineKeyboardButton("English 🇺🇸", callback_data='lang_en')],
         [InlineKeyboardButton("አማርኛ 🇪🇹", callback_data='lang_am')]
     ]
-    
-    await update.message.reply_text(
-        "🌿 Welcome! Choose Language / ቋንቋ ይምረጡ:", 
-        reply_markup=InlineKeyboardMarkup(keyboard)
-    )
+
+    message_text = "🌿 Welcome! Choose Language / ቋንቋ ይምረጡ:"
+    if update.callback_query:
+        await update.callback_query.answer()
+        await update.callback_query.message.reply_text(
+            message_text,
+            reply_markup=InlineKeyboardMarkup(keyboard)
+        )
+    else:
+        await update.message.reply_text(
+            message_text, 
+            reply_markup=InlineKeyboardMarkup(keyboard)
+        )
     return ConversationHandler.END
 
 # --- MODIFIED AFTER HOURS HANDLER ---

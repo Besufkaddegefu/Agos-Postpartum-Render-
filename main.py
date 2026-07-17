@@ -1191,39 +1191,21 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
     print(f"🔍 DEBUG - Showing decor packages in language: {lang}")
     print(f"🔍 DEBUG - Amharic decor_basic exists: {'decor_basic' in CONTENT['am']}")
     
-    # Pull the pieces from your dictionary
-    basic = CONTENT[lang]['decor_basic']
-    deluxe = CONTENT[lang]['decor_deluxe']
-    mid = CONTENT[lang]['decor_mid']
-    premium = CONTENT[lang]['decor_premium']
-    special = CONTENT[lang]['decor_special']
-    
-    # Combine them into one text string based on language
-    if lang == 'en':
-        text = (
-            f"{basic}\n\n"
-            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"{deluxe}\n\n"
-            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"{mid}\n\n"
-            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"{premium}\n\n"
-            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"{special}\n\n"
-            "👇 *Choose a package to book:*"
-        )
-    else:
-        text = (
-            f"{basic}\n\n"
-            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"{deluxe}\n\n"
-            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"{mid}\n\n"
-            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"{premium}\n\n"
-            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"{special}\n\n"
-            "👇 *ለማዘዝ አንዱን ይምረጡ፦*"
+    # Send the package details as separate messages so the final booking message stays short.
+    package_sections = [
+        CONTENT[lang]['decor_basic'],
+        CONTENT[lang]['decor_deluxe'],
+        CONTENT[lang]['decor_mid'],
+        CONTENT[lang]['decor_premium'],
+        CONTENT[lang]['decor_special'],
+    ]
+
+    for index, section in enumerate(package_sections):
+        separator = "" if index == 0 else "\n\n━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+        await query.message.reply_text(
+            f"{separator}{section}" if index == 0 else f"{separator}{section}",
+            parse_mode='Markdown',
+            disable_web_page_preview=True
         )
 
     # Dynamic buttons that change based on language
@@ -1246,20 +1228,20 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
         ]
     
+    final_text = "👇 *Choose a package to book:*" if lang == 'en' else "👇 *ለማዘዝ አንዱን ይምረጡ፦*"
+
     try:
-        # We use Markdown because your content uses [video](link)
-        await query.message.edit_text(
-            text, 
-            reply_markup=InlineKeyboardMarkup(kb), 
-            parse_mode='Markdown', 
+        await query.message.reply_text(
+            final_text,
+            reply_markup=InlineKeyboardMarkup(kb),
+            parse_mode='Markdown',
             disable_web_page_preview=True
         )
     except Exception as e:
         print(f"Markdown error: {e}")
-        # Fallback: if there's any weird character, show it as plain text
-        await query.message.edit_text(
-            text, 
-            reply_markup=InlineKeyboardMarkup(kb), 
+        await query.message.reply_text(
+            final_text,
+            reply_markup=InlineKeyboardMarkup(kb),
             disable_web_page_preview=True
         )
 

@@ -1190,8 +1190,7 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
     # Debug prints to verify
     print(f"🔍 DEBUG - Showing decor packages in language: {lang}")
     print(f"🔍 DEBUG - Amharic decor_basic exists: {'decor_basic' in CONTENT['am']}")
-    
-    # Send the package details as separate messages so the final booking message stays short.
+
     package_sections = [
         CONTENT[lang]['decor_basic'],
         CONTENT[lang]['decor_deluxe'],
@@ -1199,12 +1198,34 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
         CONTENT[lang]['decor_premium'],
         CONTENT[lang]['decor_special'],
     ]
+    combined_text = "\n\n━━━━━━━━━━━━━━━━━━━━━━━━━\n\n".join(package_sections)
 
-    for index, section in enumerate(package_sections):
-        separator = "" if index == 0 else "\n\n━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    if lang == 'en':
         await query.message.reply_text(
-            f"{separator}{section}" if index == 0 else f"{separator}{section}",
+            combined_text,
+            reply_markup=InlineKeyboardMarkup([
+                [InlineKeyboardButton("🏥 Book Hospital - 10,000 ETB", callback_data='d_start_10k')],
+                [InlineKeyboardButton("🛋️ Book Home Decor - 15,000 ETB", callback_data='d_start_15k')],
+                [InlineKeyboardButton("💎 Book Deluxe - 20,000 ETB", callback_data='d_start_20k')],
+                [InlineKeyboardButton("👑 Book Premium - 25,000 ETB", callback_data='d_start_25k')],
+                [InlineKeyboardButton("⭐ Book Special - 48,000 ETB", callback_data='d_start_48k')],
+                [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
+            ]),
             parse_mode='Markdown',
+            disable_web_page_preview=True
+        )
+    else:
+        # Amharic content stays plain text so a markdown issue does not block the response.
+        await query.message.reply_text(
+            combined_text,
+            reply_markup=InlineKeyboardMarkup([
+                [InlineKeyboardButton("🏥 የሆስፒታል ዲኮር - 10,000 ብር ይዘዙ", callback_data='d_start_10k')],
+                [InlineKeyboardButton("🛋️ የቤት ዲኮር - 15,000 ብር ይዘዙ", callback_data='d_start_15k')],
+                [InlineKeyboardButton("💎 ደልክስ ዲኮር - 20,000 ብር ይዘዙ", callback_data='d_start_20k')],
+                [InlineKeyboardButton("👑 ፕሪሚየም ዲኮር - 25,000 ብር ይዘዙ", callback_data='d_start_25k')],
+                [InlineKeyboardButton("⭐ ልዩ ዲኮር - 48,000 ብር ይዘዙ", callback_data='d_start_48k')],
+                [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
+            ]),
             disable_web_page_preview=True
         )
 

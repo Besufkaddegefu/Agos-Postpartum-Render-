@@ -55,34 +55,17 @@ print("DEBUG - Admin IDs:", ADMIN_IDS)
 (PH_NAME, PH_PHONE, PH_USERNAME, PH_DATE, PH_ADDR, PH_PACKAGE, PH_PAYMENT) = range(70, 77)  # Added PH_USERNAME
 
 # --- WORKING HOURS CHECK ---
-# --- WORKING HOURS CHECK ---
 def is_within_working_hours():
     """
     Check if current time is within working hours (8 AM - 8 PM LT)
     During these hours, bot should be OFFLINE
     """
-    # ✅ TESTING MODE: Bot always online
-    # Remove this line when testing is done
-    return False
+    # Get current time in Ethiopian time zone
+    ethiopia_now = datetime.now(ETHIOPIA_TZ)
+    current_hour = ethiopia_now.hour
     
-    # ⬇️⬇️⬇️ ORIGINAL CODE - COMMENTED OUT FOR TESTING ⬇️⬇️⬇️
-    # # Get current time in Ethiopian time zone
-    # ethiopia_now = datetime.now(ETHIOPIA_TZ)
-    # current_hour = ethiopia_now.hour
-    
-    # # Return True if within working hours (bot should be OFFLINE)
-    # return WORKING_HOURS_START <= current_hour < WORKING_HOURS_END
-# def is_within_working_hours():
-#     """
-#     Check if current time is within working hours (8 AM - 8 PM LT)
-#     During these hours, bot should be OFFLINE
-#     """
-#     # Get current time in Ethiopian time zone
-#     ethiopia_now = datetime.now(ETHIOPIA_TZ)
-#     current_hour = ethiopia_now.hour
-    
-#     # Return True if within working hours (bot should be OFFLINE)
-#     return WORKING_HOURS_START <= current_hour < WORKING_HOURS_END
+    # Return True if within working hours (bot should be OFFLINE)
+    return WORKING_HOURS_START <= current_hour < WORKING_HOURS_END
 
 
 def get_webhook_url():
@@ -263,207 +246,168 @@ async def show_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, lang: st
 CONTENT = {
     'en': {
         'welcome': (
-            "🎁 *Welcome to AGOS Surprise Packages* 🌸\n\n"
-            "🎈 *DECORATION PACKAGES*\n"
-            "Beautiful home & hospital surprise decor packages to celebrate your special arrival.\n\n"
-            "📸 *PHOTOGRAPHY & VIDEOGRAPHY*\n"
-            "Capture your precious moments with our professional photography and videography packages.\n\n"
-            "🚗 *LIMOUSINE SERVICE*\n"
-            "Arrive in style and comfort with our special limousine service for new mothers.\n\n"
+            "🎁 *Welcome to AGOS Decor & Special Services* 🌸\n\n"
+            "✨ Premium home decor for your special moments\n"
+            "🚗 Luxury limousine arrivals\n"
+            "📸 Professional photography & videography\n\n"
             "🌐 www.agospostpartumcare.com\n\n"
-            "*Care. Comfort. Celebrate.*\n\n"
             "_Making your celebrations unforgettable._"
         ),
         'btns': ["🎁 Decor Packages", "🚗 Limousine Service", "📸 Photography Services", "📞 Contact Us", "📋 Services Catalog"],
         
         # Individual Decor Package Pages with Book Buttons
         'decor_basic': (
-            "🔸 *Special Hospital Decoration (10,000 ETB)*\n"
-            "__________________________\n\n"
-            "• Beautiful and unique balloon arrangements to brighten this special moment. \n"
-            "• Heartwarming welcome baby setup to celebrate your little one.\n"
-            "• Floor Decoration with Natural flower petals elegantly arranged to create a warm and joyful atmosphere.\n"
-            "• A lovely mini bouquet to add beauty and complete your surprise.\n"
-            "• Helium balloon that floats on air for 8 hours.\n\n"
-            "🏥 *Perfect for hospital arrivals!*\n\n"
-            "📱 *👇👇👇See the previous projects we have done for 10,000 birr 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7656368390524701970) | "
-            "[2](https://www.tiktok.com/@agos_postpartumcare/video/7656368390524701970)\n\n"
-            "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
-        ),
-        'decor_deluxe': (
-            "🔸 *Home Decor Package (15,000 ETB)*\n"
+            "🔸 *Home Decor (15,000 ETB)*\n"
             "__________________________\n\n"
             "• Bedroom Decoration\n"
             "• Floor Decoration\n"
             "• Corridor Decoration\n"
             "• Salon Decoration\n\n"
-            "🛋️ *Complete home transformation!*\n\n"
             "📱 *👇👇👇See the previous projects we have done for 15,000 birr 👇👇👇:*\n"
-            "[1](https://vm.tiktok.com/ZMA2PV8vt) | "
-            "[2](https://vt.tiktok.com/ZSmoGPTJ6) | "
-            "[3](https://www.tiktok.com/@agos_postpartumcare/video/7595961687560310028?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "[video](https://vm.tiktok.com/ZMA2PAHdX) | "
+            "[video](https://vt.tiktok.com/ZSmoGPTJ6) | "
+            "[video](https://vm.tiktok.com/ZMA2PV8vt) | "
+            "[video](https://vt.tiktok.com/ZSmoGPTJ6) | "
+            "✨ *Perfect for intimate celebrations!*\n\n"
             "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
         ),
-        'decor_mid': (
+        'decor_deluxe': (
             "💎 *Home Decor Deluxe (20,000 ETB)*\n"
             "__________________________\n\n"
-            "• Bedroom Decoration\n"
-            "• Corridor Decoration\n"
-            "• Living Room / Salon Decoration\n"
-            "• Medium size bouquet and floordecor\n"
+            "• Bedroom, Corridor & Salon Decor\n"
+            "• Large Flower Arrangement (Bouquet + Floor) - እቅፍ አበባ\n"
             "• 2 Kg Normal Cake\n\n"
-            "🎂 *Beautiful celebration package!*\n\n"
             "📱 *👇👇👇See the previous projects we have done for 20,000 birr 👇👇👇:*\n"
-            "[1](https://vm.tiktok.com/ZMA2PQp4k) | "
-            "[2](https://vm.tiktok.com/ZMA2PPv9g) | "
-            "[3](https://vm.tiktok.com/ZMA2PbLWU) | "
-            "[4](https://www.tiktok.com/@agos_postpartumcare/video/7633445361310256392?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-            "[5](https://vm.tiktok.com/ZMA2PG9Nd) | "
-            "[6](https://www.tiktok.com/@agos_postpartumcare/video/7582229397864975672?is_from_webapp=1&sender_device=pc) | "
+            "[video](https://vm.tiktok.com/ZMA2PQp4k) | "
+            "[video](https://vm.tiktok.com/ZMA2PPv9g) | "
+            "[video](https://vm.tiktok.com/ZMA2PbLWU) | "
+            "[video](https://vm.tiktok.com/ZMA2PfLwK) | "
+            "[video](https://vm.tiktok.com/ZMA2PG9Nd) | "
             "🌟 *Our most popular choice!*\n\n"
             "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         'decor_premium': (
             "👑 *Home Decor Premium (25,000 ETB)*\n"
             "__________________________\n\n"
-            "• Bedroom Decoration\n"
-            "• Corridor Decoration\n"
-            "• Living Room / Salon Decoration\n"
-            "• Large size bouquet & floor decor\n"
-            "• 2 Kg Custom made Cake\n"
-            "• Bedroom decor → Agober rent for 2weeks\n\n"
-            "🎂 *Complete celebration package!*\n\n"
+            "• Bedroom Decor with Agober rent (2 weeks)\n"
+            "• Corridor & Salon Decor\n"
+            "• Large Flower Arrangement (Bouquet + Floor) - እቅፍ አበባ\n"
+            "• 2 Kg Custom Made Cake - 2 ኪሎ ኬክ በመረጡት ዲዛይን\n\n"
             "📱 *👇👇👇See the previous projects we have done for 25,000 birr 👇👇👇:*\n"
-            "[1](https://vm.tiktok.com/ZMA2Pb9Pp) | "
-            "[2](https://vm.tiktok.com/ZMA2Pq1V8) | "
-            "[3](https://vt.tiktok.com/ZSmos7LjV) | "
-            "[4](https://vm.tiktok.com/ZMA2PqRTh) | "
-            "[5](https://www.tiktok.com/@agos_postpartumcare/video/7641236350917856519?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-            "[6](https://www.tiktok.com/@agos_postpartumcare/video/7551840674677591352?_r=1&_t=ZM-914EEFmhm03) | "
-            "[7](https://www.tiktok.com/@agos_postpartumcare/video/7608210303792188690?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-            "[8](https://vt.tiktok.com/ZSmostdmb) | "
-            "[9](https://www.tiktok.com/@agos_postpartumcare/video/7637532507528858887?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "[video](https://vm.tiktok.com/ZMA2Pb9Pp) | "
+            "[video](https://vm.tiktok.com/ZMA2Pq1V8) | "
+            "[video](https://vm.tiktok.com/ZMA2Pyn8m) | "
+            "[video](https://vm.tiktok.com/ZMA2PqRTh) | "
+            "[video](https://vm.tiktok.com/ZMA2PPpoG) | "
+            "[video](https://www.tiktok.com/@agos_postpartumcare/video/7551840674677591352?_r=1&_t=ZM-914EEFmhm03) | "
             "👑 *The ultimate luxury experience!*\n\n"
             "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
-        ),
-        'decor_special': (
-            "⭐ *Special Home Decoration (48,000 ETB)*\n"
-            "__________________________\n\n"
-            "• A stunning large flower bouquet.\n"
-            "• Safe and beautiful fireworks to light up your celebration\n"
-            "• Delicious and beautifully designed 2 kg special fondant cake\n"
-            "• A cute and soft teddy bear\n"
-            "• Special & unique Complete decoration of corridor, living room and bedroom\n"
-            "• Helium balloon that floats on air for 8 hours\n"
-            "• Celebrate in style with alcohol free champagne\n"
-            "• Beautiful organic balloon bouquet to add charm to your celebration\n"
-            "✨ *The ultimate luxury experience!*\n\n"
-            "📱 *👇👇👇See the previous projects we have done for 25,000 birr 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7658305988734225671?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7657206210651016455?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-             "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         
         # Limousine Package Pages with Book Buttons
         'limo_grand': (
-            "⭐ *The Grand Arrival (35,000 ETB)*\n"
+            "⭐ *The Grand Arrival (25,000 ETB)*\n"
             "__________________________\n\n"
-            "• Special limousine service for new mothers\n"
+            "• Special limousine service\n"
             "• Grand and elegant ride home\n"
             "• Professional chauffeur\n"
-            "• Comfort and style\n\n"
+            "📸 *See our arrivals:*\n"
+            "[video](https://www.tiktok.com/@agos_postpartumcare/video/7566665605512809740) | "
+            "[Instagram](https://instagram.com/agospostpartum)\n\n"
             "🚗 *Make a stylish entrance!*\n\n"
-            "⚠️ *Prices may vary depending on conditions such as weekdays, seasonal demand (e.g., wedding seasons), and the time the order is placed.*\n\n"
             "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         'limo_special': (
-            "✨ *Special Limousine Service (45,000 ETB)*\n"
+            "✨ *Special Arrival (30,000 ETB)*\n"
             "__________________________\n\n"
-            "• Exclusive limousine service for new mothers\n"
+            "• Exclusive limousine service\n"
             "• Luxurious and heartwarming ride\n"
             "• Professional chauffeur\n"
-            "• Premium comfort and style\n\n"
-            "📱 *👇👇👇See the previous projects we have done for 45,000 birr 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7566665605512809740?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "📸 *See our arrivals:*\n"
+            "[video](https://www.tiktok.com/@agos_postpartumcare/video/7566665605512809740) | "
+            "[Instagram](https://instagram.com/agospostpartum)\n\n"
             "✨ *Extra touches for a special day!*\n\n"
-            "⚠️ *Prices may vary depending on conditions such as weekdays, seasonal demand (e.g., wedding seasons), and the time the order is placed.*\n\n"
             "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         'limo_royal': (
-            "👑 *Royal Limousine Service (50,000 ETB)*\n"
+            "👑 *Royal Welcome (35,000 ETB)*\n"
             "__________________________\n\n"
-            "• Premium luxury limousine service\n"
+            "• Premium luxury limousine\n"
             "• Truly regal welcome home\n"
             "• Professional chauffeur in formal attire\n"
-            "• Ultimate comfort and elegance\n\n"
-            "📱 *👇👇👇See the previous projects we have done for 50,000 birr 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@gracystore12/video/7657271549036137749?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "📸 *See our arrivals:*\n"
+            "[video](https://www.tiktok.com/@agos_postpartumcare/video/7566665605512809740) | "
+            "[Instagram](https://instagram.com/agospostpartum)\n\n"
             "👑 *Royal treatment for royalty!*\n\n"
-            "📞 *Contact us for pricing and availability*\n"
-            "📱 +251 967 621 545 | +251 980 040 468\n\n"
-            "⚠️ *Prices may vary depending on conditions such as weekdays, seasonal demand (e.g., wedding seasons), and the time the order is placed.*\n\n"
             "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         
         # Photography Package Pages with Book Buttons
         'photo_digital': (
-            "📱 *Digital Photography (12,000 ETB)*\n"
+            "📱 *Digital Photography (10,000 ETB)*\n"
             "__________________________\n\n"
             "• Professional photography\n"
-            "• All photos delivered in soft copy (no printed photos)\n"
+            "• All photos delivered in soft copy\n"
+            "• 2 hours coverage\n"
             "• (No physical album)\n\n"
+            "📸 *See our portfolio:*\n"
+            "[Instagram](https://instagram.com/agospostpartum) | "
+            "[Website](https://www.agospostpartumcare.com/)\n\n"
             "📱 *Perfect for digital sharing!*\n\n"
-            "👉 *📸 To see our portfolio, please visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
+            "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         'photo_standard': (
-            "🖼️ *Standard Photography (16,000 ETB)*\n"
+            "🖼️ *Standard Photography (12,000 ETB)*\n"
             "__________________________\n\n"
-            "• Normal album sized photos \n"
-            "• 100 printed photos\n"
+            "• Normal album sized photos (100 printed)\n"
             "• Soft copy of all photos\n"
+            "• 3 hours coverage\n\n"
+            "📸 *See our portfolio:*\n"
+            "[Instagram](https://instagram.com/agospostpartum) | "
+            "[Website](https://www.agospostpartumcare.com/)\n\n"
             "🖼️ *Beautiful memories you can hold!*\n\n"
-            "👉 *📸 To see our portfolio, please visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
+            "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         'photo_premium': (
-            "💎 *Premium Photography (17,000 ETB)*\n"
+            "💎 *Premium Photography (15,000 ETB)*\n"
             "__________________________\n\n"
             "• Laminated photo album (20x30 cm)\n"
             "• Soft copy of all photos\n"
+            "• 4 hours coverage\n"
             "• Professional editing\n\n"
+            "📸 *See our portfolio:*\n"
+            "[Instagram](https://instagram.com/agospostpartum) | "
+            "[Website](https://www.agospostpartumcare.com/)\n\n"
             "💎 *Heirloom quality memories!*\n\n"
-            "👉 *📸 To see our portfolio, please visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
+            "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         'videography': (
             "🎥 *Videography Package (15,000 ETB)*\n"
             "__________________________\n\n"
             "• Full video coverage\n"
             "• Edited video (soft copy)\n"
+            "• 4 hours coverage\n"
             "• Highlight reel\n\n"
+            "📸 *See our portfolio:*\n"
+            "[Instagram](https://instagram.com/agospostpartum) | "
+            "[Website](https://www.agospostpartumcare.com/)\n\n"
             "🎥 *Relive your special moments!*\n\n"
-            "👉 *📸 To see our portfolio, please visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
+            "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         
         'contact_text': (
-            "📞 *Contact Us*\n\n"
-            "⏰ *Working Hours*\n"
-            "We're available 8:00 AM - 8:00 PM\n\n"
-            "⚠️ 🤖 Bot is offline during these hours - please call us⚠️\n\n"
-            "📞 *Phone*\n"
-            "Call us for immediate assistance\n"
+            "📞 ••Contact Us••\n\n"
+            "⏰ •Working Hours:• 8:00 AM - 8:00 PM (Local Time)\n"
+            "⚠️ •Note:• Bot is offline during working hours - please call us\n\n"
+            "📞 ••Phone:•• \n\n"
             "📱 +251 967 621 545\n"
             "📱 +251 980 040 468\n\n"
-            "📱 *Telegram*\n"
-            "Reach us directly on Telegram\n"
-            "@Agospostpartumcare\n"
-            "@Agospostpartumcare0\n\n"
-            "🎵 *Follow Us*\n"
-            "📸 Instagram: (instagram.com/agos_postpartumcare)\n"
-            "🎵 TikTok: (tiktok.com/@Agos_postpartumCare)\n"
-            "📱 Telegram: (t.me/Agospostpartumcare0)\n"
-            "🌐 Website: [www.agospostpartumcare.com]\n"
-            "📍 Location: Piassa, Abat Commercial\n"
-            "[View on Map](https://maps.app.goo.gl/mHDvo7CpFwUubWyx6)"
+            "🎵 ••Follow us on :••\n"
+            "📸 •Instagram: (https://instagram.com/agos_postpartumcare)\n"
+            "🎵 •TikTok: (https://www.tiktok.com/@Agos_postpartumCare)\n"
+            "📱 •Telegram: (https://t.me/Agospostpartumcare0)\n"
+            "🌐 •Website: [www.agospostpartumcare.com]\n"
+            "📍 •Location: [Piassa, Abat Commercial](https://maps.app.goo.gl/mHDvo7CpFwUubWyx6)"
         ),
         'agree_btn': "I Agree ✅",
         'back': "🔙 Back to Menu",
@@ -502,195 +446,145 @@ CONTENT = {
     },
     'am': {
         'welcome': (
-            "🎁 *እንኳን ወደ AGOS ሰርፕራይዝ ጥቅሎች በሰላም መጡ* 🌸\n\n"
-            "🎈 *የዲኮር ፓኬጆች*\n"
-            "ልዩ የቤት እና የሆስፒታል ሰርፕራይዝ ዲኮር ፓኬጅ። \n\n"
-            "📸 *ፎቶግራፍ እና ቪዲዮግራፊ*\n"
-            "ውድ ትዝታዎችዎን በባለሙያ የፎቶግራፍ እና የቪዲዮግራፍ ጥቅሎቻችን ይቅረጹ።\n\n"
-            "🚗 *የሊሙዚን አገልግሎት*\n"
-            "ለአዳዲስ እናቶች በተዘጋጀ ልዩ የሊሙዚን አገልግሎት በምቾት ወደ ቤትዎ ይግቡ።\n\n"
-            "🌐 www.agospostpartumcare.com \n\n"
+            "🎁 *እንኳን ወደ AGOS ዲኮር እና ልዩ አገልግሎቶች በሰላም መጡ* 🌸\n\n"
+            "✨ ለልዩ ጊዜያቶችዎ የሚሆን ፕሪሚየም የቤት ዲኮር\n"
+            "🚗 የሊሙዚን አገልግሎት\n"
+            "📸 ፕሮፌሽናል ፎቶግራፍ እና ቪዲዮግራፊ\n\n"
+            "🌐 www.agospostpartumcare.com"
         ),
         'btns': ["🎁 የዲኮር ፓኬጆች", "🚗 የሊሙዚን አገልግሎት", "📸 የፎቶግራፍ አገልግሎቶች", "📞 ያግኙን", "📋 የአገልግሎት ዝርዝር"],
         
         # Individual Decor Package Pages with Book Buttons (Amharic)
         'decor_basic': (
-            "🔸 *ልዩ (Special) የሆስፒታል ዲኮር (10,000 ብር)*\n"
-            "__________________________\n\n"
-            "• ለየት ያሉ እና ብዙ ቦታ ያልተለመዱ ልዩ የፊኛ ዝግጅት\n"
-            "• (Welcome) የዌልካም ቤቢ ባሎን\n"
-            "• የመሬት ዲኮር (መሬቱን በተፈጥሮ አበቦች ማስዋብ)\n"
-            "• መካከለኛ መጠን ያለው እቅፍ አበባ\n"
-            "• ለ ስምንት ሰአታት አየር ላይ መንሳፈፍ የሚችሉ በሂልየም ጋዝ የተሞሉ ፊኛዎች\n\n"
-            "📱 *👇👇👇ከዚህ በፊት በ 10,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7656368390524701970) | "
-            "[2](https://www.tiktok.com/@agos_postpartumcare/video/7656368390524701970)\n\n"
-            "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ*: https://www.tiktok.com/@agos_postpartumcare"
-        ),
-        'decor_deluxe': (
-            "🔸 *የቤት ዲኮር ፓኬጅ (15,000 ብር)*\n"
+            "🔸 *መደበኛ ዲኮር (15,000 ብር)*\n"
             "__________________________\n\n"
             "• የመኝታ ቤት ዲኮር\n"
             "• የወለል ዲኮር\n"
             "• የኮሪደር ዲኮር\n"
             "• የሳሎን ዲኮር\n\n"
             "📱 *👇👇👇ከዚህ በፊት በ 15,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7543272773913808184?_r=1&_d=secCgYIASAHKAESPgo8LCuNoqBP%2FZU%2B6r52Ol0jeLOVx7DPloJ%2BzdN%2B6bAcHgpdMTlqIvG5%2F28vE128nMfePejDle4YblRaxLYCGgA%3D&u_code=efji3644kklcd9&share_item_id=7543272773913808184&timestamp=1756403847&utm_campaign=client_share&utm_source=short_fallback&share_app_id=1233) | "
-            "[2](https://www.tiktok.com/@agos_postpartumcare/video/7580389581950831928?_r=1&_d=secCgYIASAHKAESPgo8cjCGVV6EETZKLxhoimndu6HloEoXY6cxVcqOJv%2Bnz5c3AuBQwwenoa7TnA53HQ9qL7uxZrAm9kpUxXfmGgA%3D&u_code=dc878fgkllb8i9&share_item_id=7580389581950831928&timestamp=1772621151&utm_campaign=client_share&utm_source=short_fallback&share_app_id=1233) | "
-            "[3](https://www.tiktok.com/@agos_postpartumcare/video/7595961687560310028?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "[video](https://vm.tiktok.com/ZMA2PAHdX) | "
+            "[video](https://vt.tiktok.com/ZSmoGPTJ6) | "
+            "[video](https://vm.tiktok.com/ZMA2PV8vt) | "
+            "[video](https://vt.tiktok.com/ZSmoGPTJ6)\n\n"
             "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ*: https://www.tiktok.com/@agos_postpartumcare"
         ),
-        'decor_mid': (
-            "💎 *ዴሉክስ ዲኮር (20,000 ብር)*\n"
+        'decor_deluxe': (
+            "💎 *ደልክስ ዲኮር (20,000 ብር)*\n"
             "__________________________\n\n"
-            "• የመኝታ ቤት ዲኮር\n"
-            "• የኮሪደር ዲኮር\n"
-            "• የሳሎን ዲኮር\n"
-            "• መካከለኛ መጠን ያለው እቅፍ አበባ እናየመሬት አበባ\n"
-            "• ሁለት (2) ኪሎ መደበኛ ኬክ\n\n"
+            "• የመኝታ ቤት፣ ኮሪደር እና ሳሎን ዲኮር\n"
+            "• ትልቅ እቅፍ አበባ\n"
+            "• 2 ኪሎ መደበኛ ኬክ\n\n"
             "📱 *👇👇👇ከዚህ በፊት በ 20,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:*\n"
-            "[1](https://vm.tiktok.com/ZMA2PQp4k) | "
-            "[2](https://vm.tiktok.com/ZMA2PPv9g) | "
-            "[3](https://vm.tiktok.com/ZMA2PbLWU) | "
-            "[4](https://www.tiktok.com/@agos_postpartumcare/video/7633445361310256392?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-            "[5](https://vm.tiktok.com/ZMA2PG9Nd)\n\n"
-            "[6](https://www.tiktok.com/@agos_postpartumcare/video/7582229397864975672?is_from_webapp=1&sender_device=pc)\n\n"
+            "[video](https://vm.tiktok.com/ZMA2PQp4k) | "
+            "[video](https://vm.tiktok.com/ZMA2PPv9g) | "
+            "[video](https://vm.tiktok.com/ZMA2PbLWU) | "
+            "[video](https://vm.tiktok.com/ZMA2PfLwK) | "
+            "[video](https://vm.tiktok.com/ZMA2PG9Nd)\n\n"
             "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ*: https://www.tiktok.com/@agos_postpartumcare"
         ),
         'decor_premium': (
-            "👑 *ፕሪሚየም የቤት ዲኮር (25,000 ብር)*\n"
+            "👑 *ፕሪሚየም ዲኮር (25,000 ብር)*\n"
             "__________________________\n\n"
-            "• የመኝታ ቤት ዲኮር \n"
-            "• የአልጋ ዲኮር → የ2 ሳምንት የአጎበር ክራይ\n"
+            "• የመኝታ ቤት ዲኮር ከአጎበር ኪራይ ጋር (2 ሳምንት)\n"
             "• የኮሪደር እና ሳሎን ዲኮር\n"
-            "• ትልቅ መጠን ያለው እቅፍ አበባ እና የመሬትአበባ\n"
-            "• ሁለት (2) ኪሎ ኬክ በመረጡት ዲዛይን\n\n"
+            "• ትልቅ እቅፍ አበባ\n"
+            "• 2 ኪሎ ኬክ በመረጡት ዲዛይን\n\n"
             "📱 *👇👇👇ከዚህ በፊት በ 25,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:*\n"
-            "[1](https://vm.tiktok.com/ZMA2Pb9Pp) | "
-            "[2](https://vm.tiktok.com/ZMA2Pq1V8) | "
-            "[3](https://vt.tiktok.com/ZSmos7LjV) | "
-            "[4](https://vm.tiktok.com/ZMA2PqRTh) | "
-            "[5](https://www.tiktok.com/@agos_postpartumcare/video/7641236350917856519?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-            "[6](https://www.tiktok.com/@agos_postpartumcare/video/7551840674677591352?_r=1&_t=ZM-914EEFmhm03) | "
-            "[7](https://www.tiktok.com/@agos_postpartumcare/video/7608210303792188690?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-            "[8](https://vt.tiktok.com/ZSmostdmb) | "
-            "[9](https://www.tiktok.com/@agos_postpartumcare/video/7637532507528858887?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "[video](https://vm.tiktok.com/ZMA2Pb9Pp) | "
+            "[video](https://vm.tiktok.com/ZMA2Pq1V8) | "
+            "[video](https://vm.tiktok.com/ZMA2Pyn8m) | "
+            "[video](https://vm.tiktok.com/ZMA2PqRTh) | "
+            "[video](https://vm.tiktok.com/ZMA2PPpoG) | "
+            "[video](https://surl.li/iiicng) | "
+            "[video](https://www.tiktok.com/@agos_postpartumcare/video/7551840674677591352?_r=1&_t=ZM-914EEFmhm03) | "
             "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ*: https://www.tiktok.com/@agos_postpartumcare"
         ),
-        'decor_special': (
-            "⭐ *ልዩ የቤት ዲኮር (48,000 ብር)*\n"
-            "__________________________\n\n"
-            "• ሙሉ የመኝታ ቤት ዲኮር\n"
-            "• ሙሉ የኮሪደር ዲኮር\n"
-            "• ሙሉ የሳሎን ዲኮር\n"
-            "• ፕሮግራሙን ይበልጥ ልዩ ለማድረግ የሚሆን ትልቅ እቅፍ አበባ\n"
-            "• ፕሮግራሙን በማራኪ ሁኔታ ለማድመቅ የተዘጋጀ የርችት ዝግጅት \n"
-            "• ለፕሮግራሙን ተብሎ የተሰራ የ2 ኪሎ ፎንዳንት ኬክ\n"
-            "• የዲኮሩን ዉበት በ እጥፍ የሚጨምር የድብ አሻንጉሊት \n"
-            "• ለ ስምንት ሰአታት አየር ላይ መንሳፈፍ የሚችሉ በሂልየም ጋዝ የተሞሉ ፊኛዎች\n"
-            "• ፕሮግራሙን የማይረሳ ለማድረግ ከአልኮል ነፃ የሆነ ሻምፓኝ \n\n"
-            "• በተለያዩ መጠኖች የተሰራ የፊኛ እቅፍ\n\n"
-            "✨ *የበለጠ ልዩ ልምድ!*\n\n" 
-            "📱 *👇👇👇ከዚህ በፊት በ 48,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7658305988734225671?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-            "[2](https://www.tiktok.com/@agos_postpartumcare/video/7657206210651016455?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-            "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ*: https://www.tiktok.com/@agos_postpartumcare"
-        ),
-
+        
         # Limousine Package Pages with Book Buttons (Amharic)
         'limo_grand': (
-            "⭐ *መደበኛ አቀባበል (35,000 ብር)*\n"
+            "⭐ *መደበኛ አቀባበል (25,000 ብር)*\n"
             "__________________________\n\n"
-            "• ለአዳዲስ እናቶች ልዩ የሊሞዚን አገልግሎት\n"
-            "• ታላቅ እና የሚያምር ጉዞ\n"
-            "• ፕሮፌሽናል ሾፌር\n\n"
-            "📱 *👇👇👇ከዚህ በፊት በ 48,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7566665605512809740) | "
-            "🚗 *በታላቅ አቀባበል ይግቡ!*\n\n"
-            "⚠️ *ዋጋዉ እንደየሁኔታው ሊለያይ ይችላል ፤ ለምሳሌ እንደ ቀናት(የስራ ወይም ረፍት ቀናት) ፣ ወቅታዊ ሁኔታ (እንደ ሰርግ ጊዜያት) እና ትዕዛዝ የሚሰጥበት ሰዓት ሊለያይ ይችላል።*\n\n"
+            "• ልዩ የሊሙዚን አገልግሎት\n\n"
+            "📸 *አቀባበሎቻችንን ይመልከቱ:*\n"
+            "[video](https://www.tiktok.com/@agos_postpartumcare/video/7566665605512809740) | "
+            "[Instagram](https://instagram.com/agospostpartum)\n\n"
             "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ፦: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         'limo_special': (
-            "✨ *ልዩ አቀባበል (45,000 ብር)*\n"
+            "✨ *ልዩ አቀባበል (30,000 ብር)*\n"
             "__________________________\n\n"
-            "• ለአዳዲስ እናቶች ልዩ የሊሙዚን አገልግሎት\n"
-            "• የተሻለ እና የሚያምር ጉዞ\n"
-            "• ፕሮፌሽናል ሾፌር\n\n"
-            "📱 *👇👇👇ከዚህ በፊት በ 48,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7566665605512809740?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-            "✨ *ልዩ ቀንን የበለጠ ልዩ ያድርጉ!*\n\n"
-            "⚠️ *ዋጋዉ እንደየሁኔታው ሊለያይ ይችላል ፤ ለምሳሌ እንደ ቀናት(የስራ ወይም ረፍት ቀናት) ፣ ወቅታዊ ሁኔታ (እንደ ሰርግ ጊዜያት) እና ትዕዛዝ የሚሰጥበት ሰዓት ሊለያይ ይችላል።*\n\n"
+            "• ልዩ የሊሙዚን አገልግሎት\n\n"
+            "📸 *አቀባበሎቻችንን ይመልከቱ:*\n"
+            "[video](https://www.tiktok.com/@agos_postpartumcare/video/7566665605512809740) | "
+            "[Instagram](https://instagram.com/agospostpartum)\n\n"
             "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ፦: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         'limo_royal': (
-            "👑 *የሮያል አቀባበል (50,000 ብር)*\n"
+            "👑 *የሮያል አቀባበል (35,000 ብር)*\n"
             "__________________________\n\n"
             "• ፕሪሚየም የሊሙዚን አገልግሎት\n\n"
-            "• ንጉሣዊ አቀባበል\n"
-            "• ፕሮፌሽናል ሾፌር \n\n"
-            "📱 *👇👇👇ከዚህ በፊት በ 48,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@gracystore12/video/7657271549036137749?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-            "👑 *ንጉሣዊ አገልግሎት ለንጉሣዊ ደንበኞች!*\n\n"
-            "📞 *ዋጋ እና አቅርቦት ለማወቅ ያግኙን:*\n"
-            "📱 +251 967 621 545 | +251 980 040 468\n\n"
-            "⚠️ *ዋጋዉ እንደየሁኔታው ሊለያይ ይችላል ፤ ለምሳሌ እንደ ቀናት(የስራ ወይም ረፍት ቀናት) ፣ ወቅታዊ ሁኔታ (እንደ ሰርግ ጊዜያት) እና ትዕዛዝ የሚሰጥበት ሰዓት ሊለያይ ይችላል።*\n\n"
+            "📸 *አቀበሎቻችንን ይመልከቱ:*\n"
+            "[video](https://www.tiktok.com/@agos_postpartumcare/video/7566665605512809740e) | "
+            "[Instagram](https://instagram.com/agospostpartum)\n\n"
             "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ፦: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         
         # Photography Package Pages with Book Buttons (Amharic)
         'photo_digital': (
-            "📱 *ዲጂታል ፎቶግራፍ (12,000 ብር)*\n"
+            "📱 *ዲጂታል ፎቶግራፍ (10,000 ብር)*\n"
             "__________________________\n\n"
             "• የባለሙያ ፎቶግራፍ አገልግሎት\n"
-            "• የታተሙ ፎቶዎች የለውም\n"
-            "• ሁሉም ፎቶዎች በሶፍት ኮፒ ብቻ\n\n"
-            "👉 *📸 ስራዎቻችንን ለመመልከት የቲክቶክ ገፃችንን ይጎብኙ፦: https://www.tiktok.com/@agos_postpartumcare*"
+            "• ሁሉም ፎቶዎች በሶፍት ኮፒ\n\n"
+            "📸 *ስራዎቻችንን ይመልከቱ:*\n"
+            "[Instagram](https://instagram.com/agospostpartum) | "
+            "[Website](https://www.agospostpartumcare.com/)\n\n"
+            "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ፦: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         'photo_standard': (
-            "🖼️ *መደበኛ ፎቶግራፍ (16,000 ብር)*\n"
+            "🖼️ *መደበኛ ፎቶግራፍ (12,000 ብር)*\n"
             "__________________________\n\n"
             "• 100 የታተሙ ፎቶዎች\n"
-            "• መደበኛ አልበም\n"
             "• ሁሉም ፎቶዎች በሶፍት ኮፒ\n\n"
-            "👉 *📸 ስራዎቻችንን ለመመልከት የቲክቶክ ገፃችንን ይጎብኙ፦: https://www.tiktok.com/@agos_postpartumcare*"
+            "📸 *ስራዎቻችንን ይመልከቱ:*\n"
+            "[Instagram](https://instagram.com/agospostpartum) | "
+            "[Website](https://www.agospostpartumcare.com/)\n\n"
+            "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ፦: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         'photo_premium': (
-            "💎 *ፕሪሚየም ፎቶግራፍ (17,000 ብር)*\n"
+            "💎 *ፕሪሚየም ፎቶግራፍ (15,000 ብር)*\n"
             "__________________________\n\n"
             "• ላሚኔት የተደረገ አልበም\n"
             "• ሁሉም ፎቶዎች በሶፍት ኮፒ\n\n"
-            "👉 *📸 ስራዎቻችንን ለመመልከት የቲክቶክ ገፃችንን ይጎብኙ፦: https://www.tiktok.com/@agos_postpartumcare*"
+            "📸 *ስራዎቻችንን ይመልከቱ:*\n"
+            "[Instagram](https://instagram.com/agospostpartum) | "
+            "[Website](https://www.agospostpartumcare.com/)\n\n"
+            "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ፦: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         'videography': (
             "🎥 *የቪዲዮ አገልግሎት (15,000 ብር)*\n"
             "__________________________\n\n"
             "• ሙሉ የቪዲዮ ሽፋን \n"
-            "• በባለሙያ ኤዲት የተደረገ ቪዲዮ (ሶፍት ኮፒ)\n\n"
-            "• ሃይላይት ሪል\n\n"
-            "👉 *📸 ስራዎቻችንን ለመመልከት የቲክቶክ ገፃችንን ይጎብኙ፦: https://www.tiktok.com/@agos_postpartumcare*"
+            "• በባለሙያ ኤዲት የተደረገ ቪዲዮ\n\n"
+            "📸 *ስራዎቻችንን ይመልከቱ:*\n"
+            "[Instagram](https://instagram.com/agospostpartum) | "
+            "[Website](https://www.agospostpartumcare.com/)\n\n"
+            "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ፦: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         
         'contact_text': (
-            "📞 *ያግኙን* 📞\n\n"
-            "⏰ *የስራ ሰዓት*\n"
-            "ከ ጥዋት 2፡00 ሰዓት  - ማታ 2፡00 ሰዓት  \n"
-            "⚠️ *ማሳሰቢያ* 🤖 ቦቱ በስራ ሰዓት አይሰራም አይሰራም - እባክዎ ይደውሉልን\n\n"
-            "📞 *ስልክ* \n\n"
-            "ለፈጣን እርዳታ እባክዎን ይደውሉልን\n"
+            "📞 ••ያግኙን••\n\n"
+            "⏰ •የስራ ሰዓት: 2፡00 ጥዋት - 2፡00 ማታ (በአካባቢው ሰዓት)\n"
+            "⚠️ •ማሳሰቢያ: ቦት በስራ ሰዓት አይሰራም - እባክዎ ይደውሉልን\n\n"
+            "📞 ••ስልክ:•• \n\n"
             "📱 +251 967 621 545\n"
             "📱 +251 980 040 468\n\n"
-            "📱 *ቴሌግራም*\n"
-            "በቴሌግራም በቀጥታ ያግኙን\n"
-            "@Agospostpartumcare\n"
-            "@Agospostpartumcare0\n\n"
-            "🎵 የሶሻል ሚዲያ ገፃችንን ይጎብኙ :\n"
-            "📸 ኢንስታግራም: (https://instagram.com/agos_postpartumcare)\n"
-            "🎵 ቲክቶክ: (https://www.tiktok.com/@Agos_postpartumCare)\n"
-            "📱 ቴሌግራም: (https://t.me/Agospostpartumcare0)\n"
-            "🌐 ዌብሳይት: [www.agospostpartumcare.com]\n"
-            "📍 *አድራሻ*\n"
-            "በፒያሳ፣ አባት ኮሜርሻል ይጎብኙን\n"
-            "[ካርታ ለማየት](https://maps.app.goo.gl/mHDvo7CpFwUubWyx6)"
+            "🎵 •• የሶሻል ሚዲያ ገፃችንን ይጎብኙ :••\n"
+            "📸 •ኢንስታግራም: (https://instagram.com/agos_postpartumcare)\n"
+            "🎵 •ቲክቶክ: (https://www.tiktok.com/@Agos_postpartumCare)\n"
+            "📱 •ቴሌግራም: (https://t.me/Agospostpartumcare0)\n"
+            "🌐 •ዌብሳይት: [www.agospostpartumcare.com]\n"
+            "📍 •አድራሻ: [ፒያሳ፣ አባት ኮሜርሻል](https://maps.app.goo.gl/mHDvo7CpFwUubWyx6)"
         ),
         'agree_btn': "እስማማለሁ ✅",
         'back': "🔙 ወደ ዋና ማውጫ",
@@ -801,6 +695,7 @@ def create_decor_pdf(data):
         'd_house': 'House Type',
         'd_pkg': 'Selected Package',
         'd_date': 'Preferred Date & Time',
+        'd_notes': 'Special Requests / Notes'
     }
     
     for key, value in data.items():
@@ -1199,9 +1094,7 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
     # Pull the pieces from your dictionary
     basic = CONTENT[lang]['decor_basic']
     deluxe = CONTENT[lang]['decor_deluxe']
-    mid = CONTENT[lang]['decor_mid']
     premium = CONTENT[lang]['decor_premium']
-    special = CONTENT[lang]['decor_special']
     
     # Combine them into one text string based on language
     if lang == 'en':
@@ -1210,11 +1103,7 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
             "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
             f"{deluxe}\n\n"
             "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"{mid}\n\n"
-            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
             f"{premium}\n\n"
-            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"{special}\n\n"
             "👇 *Choose a package to book:*"
         )
     else:
@@ -1223,31 +1112,23 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
             "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
             f"{deluxe}\n\n"
             "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"{mid}\n\n"
-            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
             f"{premium}\n\n"
-            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"{special}\n\n"
             "👇 *ለማዘዝ አንዱን ይምረጡ፦*"
         )
 
     # Dynamic buttons that change based on language
     if lang == 'en':
         kb = [
-            [InlineKeyboardButton("🏥 Book Hospital - 10,000 ETB", callback_data='d_start_10k')],
-            [InlineKeyboardButton("🛋️ Book Home Decor - 15,000 ETB", callback_data='d_start_15k')],
-            [InlineKeyboardButton("💎 Book Deluxe - 20,000 ETB", callback_data='d_start_20k')],
-            [InlineKeyboardButton("👑 Book Premium - 25,000 ETB", callback_data='d_start_25k')],
-            [InlineKeyboardButton("⭐ Book Special - 48,000 ETB", callback_data='d_start_48k')],
+            [InlineKeyboardButton("📝 Book 🔸 Basic - 15,000 ETB", callback_data='d_start_basic')],
+            [InlineKeyboardButton("📝 Book 💎 Deluxe - 20,000 ETB", callback_data='d_start_deluxe')],
+            [InlineKeyboardButton("📝 Book 👑 Premium - 25,000 ETB", callback_data='d_start_premium')],
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
         ]
     else:
         kb = [
-            [InlineKeyboardButton("🏥 የሆስፒታል ዲኮር - 10,000 ብር ይዘዙ", callback_data='d_start_10k')],
-            [InlineKeyboardButton("🛋️ የቤት ዲኮር - 15,000 ብር ይዘዙ", callback_data='d_start_15k')],
-            [InlineKeyboardButton("💎 ደልክስ ዲኮር - 20,000 ብር ይዘዙ", callback_data='d_start_20k')],
-            [InlineKeyboardButton("👑 ፕሪሚየም ዲኮር - 25,000 ብር ይዘዙ", callback_data='d_start_25k')],
-            [InlineKeyboardButton("⭐ ልዩ ዲኮር - 48,000 ብር ይዘዙ", callback_data='d_start_48k')],
+            [InlineKeyboardButton("🔸 መደበኛ - 15,000 ETB ይዘዙ", callback_data='d_start_basic')],
+            [InlineKeyboardButton("💎 ደልክስ - 20,000 ETB ይዘዙ", callback_data='d_start_deluxe')],
+            [InlineKeyboardButton("👑 ፕሪሚየም - 25,000 ETB ይዘዙ", callback_data='d_start_premium')],
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
         ]
     
@@ -1283,16 +1164,16 @@ async def show_limo_packages(update: Update, context: ContextTypes.DEFAULT_TYPE)
 
     if lang == 'en':
         kb = [
-            [InlineKeyboardButton("⭐ Book ⭐ Grand Arrival - 35,000 ETB", callback_data='l_start_grand')],
-            [InlineKeyboardButton("✨ Book ✨ Special Arrival - 45,000 ETB", callback_data='l_start_special')],
-            [InlineKeyboardButton("👑 Book 👑 Royal Welcome - 50,000 ETB", callback_data='l_start_royal')],
+            [InlineKeyboardButton("⭐ Book ⭐ Grand Arrival - 25,000 ETB", callback_data='l_start_grand')],
+            [InlineKeyboardButton("✨ Book ✨ Special Arrival - 30,000 ETB", callback_data='l_start_special')],
+            [InlineKeyboardButton("👑 Book 👑 Royal Welcome - 35,000 ETB", callback_data='l_start_royal')],
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
         ]
     else:
         kb = [
-            [InlineKeyboardButton("⭐ መደበኛ - 35,000 ETB ይዘዙ", callback_data='l_start_grand')],
-            [InlineKeyboardButton("✨ ልዩ - 45,000 ETB ይዘዙ", callback_data='l_start_special')],
-            [InlineKeyboardButton("👑 ሮያል - 50,000 ETB ይዘዙ", callback_data='l_start_royal')],
+            [InlineKeyboardButton("⭐ መደበኛ - 25,000 ETB ይዘዙ", callback_data='l_start_grand')],
+            [InlineKeyboardButton("✨ ልዩ - 30,000 ETB ይዘዙ", callback_data='l_start_special')],
+            [InlineKeyboardButton("👑 ሮያል - 35,000 ETB ይዘዙ", callback_data='l_start_royal')],
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
         ]
     
@@ -1315,17 +1196,17 @@ async def show_photo_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
 
     if lang == 'en':
         kb = [
-            [InlineKeyboardButton("📱 Book 📱 Digital Photo - 12,000 ETB", callback_data='ph_start_digital')],
-            [InlineKeyboardButton("🖼️ Book 🖼️ Standard Photo - 16,000 ETB", callback_data='ph_start_standard')],
-            [InlineKeyboardButton("💎 Book 💎 Premium Photo - 17,000 ETB", callback_data='ph_start_premium')],
+            [InlineKeyboardButton("📱 Book 📱 Digital Photo - 10,000 ETB", callback_data='ph_start_digital')],
+            [InlineKeyboardButton("🖼️ Book 🖼️ Standard Photo - 12,000 ETB", callback_data='ph_start_standard')],
+            [InlineKeyboardButton("💎 Book 💎 Premium Photo - 15,000 ETB", callback_data='ph_start_premium')],
             [InlineKeyboardButton("🎥 Book 🎥 Videography - 15,000 ETB", callback_data='ph_start_video')],
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
         ]
     else:
         kb = [
-            [InlineKeyboardButton("📱 ዲጂታል - 12,000 ETB ይዘዙ", callback_data='ph_start_digital')],
-            [InlineKeyboardButton("🖼️ መደበኛ - 16,000 ETB ይዘዙ", callback_data='ph_start_standard')],
-            [InlineKeyboardButton("💎 ፕሪሚየም - 17,000 ETB ይዘዙ", callback_data='ph_start_premium')],
+            [InlineKeyboardButton("📱 ዲጂታል - 10,000 ETB ይዘዙ", callback_data='ph_start_digital')],
+            [InlineKeyboardButton("🖼️ መደበኛ - 12,000 ETB ይዘዙ", callback_data='ph_start_standard')],
+            [InlineKeyboardButton("💎 ፕሪሚየም - 15,000 ETB ይዘዙ", callback_data='ph_start_premium')],
             [InlineKeyboardButton("🎥 ቪዲዮ - 15,000 ETB ይዘዙ", callback_data='ph_start_video')],
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
         ]
@@ -1335,9 +1216,8 @@ async def show_photo_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
     except Exception:
         await query.message.edit_text(text, reply_markup=InlineKeyboardMarkup(kb), disable_web_page_preview=True)
 
-# --- INDIVIDUAL PACKAGE VIEW FUNCTIONS ---]
+# --- INDIVIDUAL PACKAGE VIEW FUNCTIONS ---
 async def view_decor_basic(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """View 10,000 ETB Hospital Decoration package"""
     query = update.callback_query
     await query.answer()
     lang = context.user_data.get('lang', 'en')
@@ -1345,7 +1225,7 @@ async def view_decor_basic(update: Update, context: ContextTypes.DEFAULT_TYPE):
     back_text = "🔙 Back to Packages" if lang == 'en' else "🔙 ወደ ፓኬጆች ተመለስ"
     
     kb = [
-        [InlineKeyboardButton(CONTENT[lang]['book_now'], callback_data='d_start_10k')],
+        [InlineKeyboardButton(CONTENT[lang]['book_now'], callback_data='d_start_basic')],
         [InlineKeyboardButton(back_text, callback_data='show_decor_packages')],
         [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
     ]
@@ -1355,8 +1235,8 @@ async def view_decor_basic(update: Update, context: ContextTypes.DEFAULT_TYPE):
         reply_markup=InlineKeyboardMarkup(kb),
         parse_mode='Markdown'
     )
+
 async def view_decor_deluxe(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """View 15,000 ETB Home Decor package"""
     query = update.callback_query
     await query.answer()
     lang = context.user_data.get('lang', 'en')
@@ -1364,7 +1244,7 @@ async def view_decor_deluxe(update: Update, context: ContextTypes.DEFAULT_TYPE):
     back_text = "🔙 Back to Packages" if lang == 'en' else "🔙 ወደ ፓኬጆች ተመለስ"
     
     kb = [
-        [InlineKeyboardButton(CONTENT[lang]['book_now'], callback_data='d_start_15k')],
+        [InlineKeyboardButton(CONTENT[lang]['book_now'], callback_data='d_start_deluxe')],
         [InlineKeyboardButton(back_text, callback_data='show_decor_packages')],
         [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
     ]
@@ -1373,28 +1253,9 @@ async def view_decor_deluxe(update: Update, context: ContextTypes.DEFAULT_TYPE):
         CONTENT[lang]['decor_deluxe'],
         reply_markup=InlineKeyboardMarkup(kb),
         parse_mode='Markdown'
-    ) 
-async def view_decor_mid(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """View 20,000 ETB Decor Deluxe package"""
-    query = update.callback_query
-    await query.answer()
-    lang = context.user_data.get('lang', 'en')
-    
-    back_text = "🔙 Back to Packages" if lang == 'en' else "🔙 ወደ ፓኬጆች ተመለስ"
-    
-    kb = [
-        [InlineKeyboardButton(CONTENT[lang]['book_now'], callback_data='d_start_20k')],
-        [InlineKeyboardButton(back_text, callback_data='show_decor_packages')],
-        [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
-    ]
-    
-    await query.message.edit_text(
-        CONTENT[lang]['decor_mid'],
-        reply_markup=InlineKeyboardMarkup(kb),
-        parse_mode='Markdown'
     )
+
 async def view_decor_premium(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """View 25,000 ETB Premium Decor package"""
     query = update.callback_query
     await query.answer()
     lang = context.user_data.get('lang', 'en')
@@ -1402,32 +1263,13 @@ async def view_decor_premium(update: Update, context: ContextTypes.DEFAULT_TYPE)
     back_text = "🔙 Back to Packages" if lang == 'en' else "🔙 ወደ ፓኬጆች ተመለስ"
     
     kb = [
-        [InlineKeyboardButton(CONTENT[lang]['book_now'], callback_data='d_start_25k')],
+        [InlineKeyboardButton(CONTENT[lang]['book_now'], callback_data='d_start_premium')],
         [InlineKeyboardButton(back_text, callback_data='show_decor_packages')],
         [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
     ]
     
     await query.message.edit_text(
         CONTENT[lang]['decor_premium'],
-        reply_markup=InlineKeyboardMarkup(kb),
-        parse_mode='Markdown'
-    )
-async def view_decor_special(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """View 48,000 ETB Special Decoration package"""
-    query = update.callback_query
-    await query.answer()
-    lang = context.user_data.get('lang', 'en')
-    
-    back_text = "🔙 Back to Packages" if lang == 'en' else "🔙 ወደ ፓኬጆች ተመለስ"
-    
-    kb = [
-        [InlineKeyboardButton(CONTENT[lang]['book_now'], callback_data='d_start_48k')],
-        [InlineKeyboardButton(back_text, callback_data='show_decor_packages')],
-        [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
-    ]
-    
-    await query.message.edit_text(
-        CONTENT[lang]['decor_special'],
         reply_markup=InlineKeyboardMarkup(kb),
         parse_mode='Markdown'
     )
@@ -1656,11 +1498,9 @@ async def d_step6(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # If package wasn't pre-selected, show package selection
     if 'd_pkg' not in context.user_data:
         kb = [
-            [InlineKeyboardButton("Hospital Decor - 10,000 ETB", callback_data='10k')],
-            [InlineKeyboardButton("Home Decor - 15,000 ETB", callback_data='15k')],
-            [InlineKeyboardButton("Deluxe Decor - 20,000 ETB", callback_data='20k')],
-            [InlineKeyboardButton("Premium Decor- 25,000 ETB", callback_data='25k')],
-            [InlineKeyboardButton("Special Decor - 48,000 ETB", callback_data='48k')],
+            [InlineKeyboardButton("Basic - 15,000 ETB", callback_data='15k')],
+            [InlineKeyboardButton("Deluxe - 20,000 ETB", callback_data='20k')],
+            [InlineKeyboardButton("Premium - 25,000 ETB", callback_data='25k')],
             [InlineKeyboardButton(CONTENT[lang]['q_back'], callback_data='d_back')],
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='show_decor_packages')]
         ]
@@ -1890,13 +1730,13 @@ async def l_step5(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # If package wasn't pre-selected, show package selection
     if 'l_package' not in context.user_data:
         kb = [
-            [InlineKeyboardButton("Grand Arrival - 35,000 ETB", callback_data='l_35k'),
-             InlineKeyboardButton("Special Arrival - 45,000 ETB", callback_data='l_45k')],
-            [InlineKeyboardButton("Royal Welcome - 50,000 ETB", callback_data='l_50k')],
+            [InlineKeyboardButton("Grand Arrival - 25,000 ETB", callback_data='l_25k'),
+             InlineKeyboardButton("Special Arrival - 30,000 ETB", callback_data='l_30k')],
+            [InlineKeyboardButton("Royal Welcome - 35,000 ETB", callback_data='l_35k')],
             [InlineKeyboardButton(CONTENT[lang]['q_back'], callback_data='l_back')],
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='show_limo_packages')]
         ]
-         
+        
         await update.message.reply_text(
             "6. Select Package / ፓኬጅ ይምረጡ:",
             reply_markup=InlineKeyboardMarkup(kb)
@@ -2098,9 +1938,9 @@ async def ph_step5(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # If package wasn't pre-selected, show package selection
     if 'ph_package' not in context.user_data:
         kb = [
-            [InlineKeyboardButton("Digital Photography - 12,000 ETB", callback_data='ph_12k')],
-            [InlineKeyboardButton("Standard Photography - 16,000 ETB", callback_data='ph_16k')],
-            [InlineKeyboardButton("Premium Photography - 17,000 ETB", callback_data='ph_17k')],
+            [InlineKeyboardButton("Digital Photography - 10,000 ETB", callback_data='ph_10k')],
+            [InlineKeyboardButton("Standard Photography - 12,000 ETB", callback_data='ph_12k')],
+            [InlineKeyboardButton("Premium Photography - 15,000 ETB", callback_data='ph_15k')],
             [InlineKeyboardButton("Videography - 15,000 ETB", callback_data='ph_15k_vid')],
             [InlineKeyboardButton(CONTENT[lang]['q_back'], callback_data='ph_back')],
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='show_photo_packages')]
@@ -2124,9 +1964,9 @@ async def ph_step6(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if query.data != 'ph_back':
             # Map package selections
             package_map = {
-                'ph_10k': 'Digital Photography - 12,000 ETB',
-                'ph_12k': 'Standard Photography - 16,000 ETB', 
-                'ph_15k': 'Premium Photography - 17,000 ETB',
+                'ph_10k': 'Digital Photography - 10,000 ETB',
+                'ph_12k': 'Standard Photography - 12,000 ETB', 
+                'ph_15k': 'Premium Photography - 15,000 ETB',
                 'ph_15k_vid': 'Videography - 15,000 ETB'
             }
             context.user_data['ph_package'] = package_map.get(query.data, query.data)
@@ -2348,9 +2188,7 @@ if __name__ == '__main__':
     # Individual package view handlers
     app.add_handler(CallbackQueryHandler(view_decor_basic, pattern='^view_decor_basic$'))
     app.add_handler(CallbackQueryHandler(view_decor_deluxe, pattern='^view_decor_deluxe$'))
-    app.add_handler(CallbackQueryHandler(view_decor_mid, pattern='^view_decor_mid$'))
     app.add_handler(CallbackQueryHandler(view_decor_premium, pattern='^view_decor_premium$'))
-    app.add_handler(CallbackQueryHandler(view_decor_special, pattern='^view_decor_special$'))
     
     app.add_handler(CallbackQueryHandler(view_limo_grand, pattern='^view_limo_grand$'))
     app.add_handler(CallbackQueryHandler(view_limo_special, pattern='^view_limo_special$'))
@@ -2364,11 +2202,9 @@ if __name__ == '__main__':
     # Decor booking conversation handler with package pre-selection
     d_conv = ConversationHandler(
         entry_points=[
-            CallbackQueryHandler(lambda u, c: d_start(u, c, '10k'), pattern='^d_start_10k$'),
-            CallbackQueryHandler(lambda u, c: d_start(u, c, '15k'), pattern='^d_start_15k$'),
-            CallbackQueryHandler(lambda u, c: d_start(u, c, '20k'), pattern='^d_start_20k$'),
-            CallbackQueryHandler(lambda u, c: d_start(u, c, '25k'), pattern='^d_start_25k$'),
-            CallbackQueryHandler(lambda u, c: d_start(u, c, '48k'), pattern='^d_start_48k$')
+            CallbackQueryHandler(lambda u, c: d_start(u, c, '15k'), pattern='^d_start_basic$'),
+            CallbackQueryHandler(lambda u, c: d_start(u, c, '20k'), pattern='^d_start_deluxe$'),
+            CallbackQueryHandler(lambda u, c: d_start(u, c, '25k'), pattern='^d_start_premium$')
         ],
         states={
             D_NAME: [MessageHandler(filters.TEXT & ~filters.COMMAND, d_step1)],
@@ -2395,9 +2231,9 @@ if __name__ == '__main__':
     # Limousine booking conversation handler with package pre-selection
     l_conv = ConversationHandler(
         entry_points=[
-            CallbackQueryHandler(lambda u, c: l_start(u, c, 'l_35k'), pattern='^l_start_grand$'),
-            CallbackQueryHandler(lambda u, c: l_start(u, c, 'l_45k'), pattern='^l_start_special$'),
-            CallbackQueryHandler(lambda u, c: l_start(u, c, 'l_50k'), pattern='^l_start_royal$')
+            CallbackQueryHandler(lambda u, c: l_start(u, c, 'l_25k'), pattern='^l_start_grand$'),
+            CallbackQueryHandler(lambda u, c: l_start(u, c, 'l_30k'), pattern='^l_start_special$'),
+            CallbackQueryHandler(lambda u, c: l_start(u, c, 'l_35k'), pattern='^l_start_royal$')
         ],
         states={
             L_NAME: [MessageHandler(filters.TEXT & ~filters.COMMAND, l_step1)],
@@ -2421,9 +2257,9 @@ if __name__ == '__main__':
     # Photography booking conversation handler with package pre-selection
     ph_conv = ConversationHandler(
         entry_points=[
-            CallbackQueryHandler(lambda u, c: ph_start(u, c, 'ph_12k'), pattern='^ph_start_digital$'),
-            CallbackQueryHandler(lambda u, c: ph_start(u, c, 'ph_16k'), pattern='^ph_start_standard$'),
-            CallbackQueryHandler(lambda u, c: ph_start(u, c, 'ph_17k'), pattern='^ph_start_premium$'),
+            CallbackQueryHandler(lambda u, c: ph_start(u, c, 'ph_10k'), pattern='^ph_start_digital$'),
+            CallbackQueryHandler(lambda u, c: ph_start(u, c, 'ph_12k'), pattern='^ph_start_standard$'),
+            CallbackQueryHandler(lambda u, c: ph_start(u, c, 'ph_15k'), pattern='^ph_start_premium$'),
             CallbackQueryHandler(lambda u, c: ph_start(u, c, 'ph_15k_vid'), pattern='^ph_start_video$')
         ],
         states={

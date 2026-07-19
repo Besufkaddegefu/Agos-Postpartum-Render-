@@ -60,12 +60,28 @@ def is_within_working_hours():
     Check if current time is within working hours (8 AM - 8 PM LT)
     During these hours, bot should be OFFLINE
     """
-    # Get current time in Ethiopian time zone
-    ethiopia_now = datetime.now(ETHIOPIA_TZ)
-    current_hour = ethiopia_now.hour
+    # ✅ TESTING MODE: Bot always online
+    # Remove this line when testing is done
+    return False
     
-    # Return True if within working hours (bot should be OFFLINE)
-    return WORKING_HOURS_START <= current_hour < WORKING_HOURS_END
+    # ⬇️⬇️⬇️ ORIGINAL CODE - COMMENTED OUT FOR TESTING ⬇️⬇️⬇️
+    # # Get current time in Ethiopian time zone
+    # ethiopia_now = datetime.now(ETHIOPIA_TZ)
+    # current_hour = ethiopia_now.hour
+    
+    # # Return True if within working hours (bot should be OFFLINE)
+    # return WORKING_HOURS_START <= current_hour < WORKING_HOURS_END
+# def is_within_working_hours():
+#     """
+#     Check if current time is within working hours (8 AM - 8 PM LT)
+#     During these hours, bot should be OFFLINE
+#     """
+#     # Get current time in Ethiopian time zone
+#     ethiopia_now = datetime.now(ETHIOPIA_TZ)
+#     current_hour = ethiopia_now.hour
+    
+#     # Return True if within working hours (bot should be OFFLINE)
+#     return WORKING_HOURS_START <= current_hour < WORKING_HOURS_END
 
 
 def get_webhook_url():

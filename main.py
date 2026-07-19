@@ -330,6 +330,25 @@ CONTENT = {
             "[3](https://www.tiktok.com/@agos_postpartumcare/video/7595961687560310028?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
             "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
         ),
+        'decor_mid': (
+            "💎 *Home Decor Deluxe (20,000 ETB)*\n"
+            "__________________________\n\n"
+            "• Bedroom Decoration\n"
+            "• Corridor Decoration\n"
+            "• Living Room / Salon Decoration\n"
+            "• Medium size bouquet and floordecor\n"
+            "• 2 Kg Normal Cake\n\n"
+            "🎂 *Beautiful celebration package!*\n\n"
+            "📱 *👇👇👇See the previous projects we have done for 20,000 birr 👇👇👇:*\n"
+            "[1](https://vm.tiktok.com/ZMA2PQp4k) | "
+            "[2](https://vm.tiktok.com/ZMA2PPv9g) | "
+            "[3](https://vm.tiktok.com/ZMA2PbLWU) | "
+            "[4](https://www.tiktok.com/@agos_postpartumcare/video/7633445361310256392?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "[5](https://vm.tiktok.com/ZMA2PG9Nd) | "
+            "[6](https://www.tiktok.com/@agos_postpartumcare/video/7582229397864975672?is_from_webapp=1&sender_device=pc) | "
+            "🌟 *Our most popular choice!*\n\n"
+            "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
+        ),
         'decor_premium': (
             "👑 *Home Decor Premium (25,000 ETB)*\n"
             "__________________________\n\n"
@@ -352,6 +371,23 @@ CONTENT = {
             "[9](https://www.tiktok.com/@agos_postpartumcare/video/7637532507528858887?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
             "👑 *The ultimate luxury experience!*\n\n"
             "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
+        ),
+        'decor_special': (
+            "⭐ *Special Home Decoration (48,000 ETB)*\n"
+            "__________________________\n\n"
+            "• A stunning large flower bouquet.\n"
+            "• Safe and beautiful fireworks to light up your celebration\n"
+            "• Delicious and beautifully designed 2 kg special fondant cake\n"
+            "• A cute and soft teddy bear\n"
+            "• Special & unique Complete decoration of corridor, living room and bedroom\n"
+            "• Helium balloon that floats on air for 8 hours\n"
+            "• Celebrate in style with alcohol free champagne\n"
+            "• Beautiful organic balloon bouquet to add charm to your celebration\n"
+            "✨ *The ultimate luxury experience!*\n\n"
+            "📱 *👇👇👇See the previous projects we have done for 25,000 birr 👇👇👇:*\n"
+            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7658305988734225671?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7657206210651016455?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+             "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         
         # Limousine Package Pages with Book Buttons
@@ -529,6 +565,23 @@ CONTENT = {
             "[3](https://www.tiktok.com/@agos_postpartumcare/video/7595961687560310028?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
             "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ*: https://www.tiktok.com/@agos_postpartumcare"
         ),
+        'decor_mid': (
+            "💎 *ዴሉክስ ዲኮር (20,000 ብር)*\n"
+            "__________________________\n\n"
+            "• የመኝታ ቤት ዲኮር\n"
+            "• የኮሪደር ዲኮር\n"
+            "• የሳሎን ዲኮር\n"
+            "• መካከለኛ መጠን ያለው እቅፍ አበባ እናየመሬት አበባ\n"
+            "• ሁለት (2) ኪሎ መደበኛ ኬክ\n\n"
+            "📱 *👇👇👇ከዚህ በፊት በ 20,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:*\n"
+            "[1](https://vm.tiktok.com/ZMA2PQp4k) | "
+            "[2](https://vm.tiktok.com/ZMA2PPv9g) | "
+            "[3](https://vm.tiktok.com/ZMA2PbLWU) | "
+            "[4](https://www.tiktok.com/@agos_postpartumcare/video/7633445361310256392?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "[5](https://vm.tiktok.com/ZMA2PG9Nd)\n\n"
+            "[6](https://www.tiktok.com/@agos_postpartumcare/video/7582229397864975672?is_from_webapp=1&sender_device=pc)\n\n"
+            "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ*: https://www.tiktok.com/@agos_postpartumcare"
+        ),
         'decor_premium': (
             "👑 *ፕሪሚየም የቤት ዲኮር (25,000 ብር)*\n"
             "__________________________\n\n"
@@ -547,6 +600,25 @@ CONTENT = {
             "[7](https://www.tiktok.com/@agos_postpartumcare/video/7608210303792188690?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
             "[8](https://vt.tiktok.com/ZSmostdmb) | "
             "[9](https://www.tiktok.com/@agos_postpartumcare/video/7637532507528858887?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ*: https://www.tiktok.com/@agos_postpartumcare"
+        ),
+        'decor_special': (
+            "⭐ *ልዩ የቤት ዲኮር (48,000 ብር)*\n"
+            "__________________________\n\n"
+            "• ሙሉ የመኝታ ቤት ዲኮር\n"
+            "• ሙሉ የኮሪደር ዲኮር\n"
+            "• ሙሉ የሳሎን ዲኮር\n"
+            "• ፕሮግራሙን ይበልጥ ልዩ ለማድረግ የሚሆን ትልቅ እቅፍ አበባ\n"
+            "• ፕሮግራሙን በማራኪ ሁኔታ ለማድመቅ የተዘጋጀ የርችት ዝግጅት \n"
+            "• ለፕሮግራሙን ተብሎ የተሰራ የ2 ኪሎ ፎንዳንት ኬክ\n"
+            "• የዲኮሩን ዉበት በ እጥፍ የሚጨምር የድብ አሻንጉሊት \n"
+            "• ለ ስምንት ሰአታት አየር ላይ መንሳፈፍ የሚችሉ በሂልየም ጋዝ የተሞሉ ፊኛዎች\n"
+            "• ፕሮግራሙን የማይረሳ ለማድረግ ከአልኮል ነፃ የሆነ ሻምፓኝ \n\n"
+            "• በተለያዩ መጠኖች የተሰራ የፊኛ እቅፍ\n\n"
+            "✨ *የበለጠ ልዩ ልምድ!*\n\n" 
+            "📱 *👇👇👇ከዚህ በፊት በ 48,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:*\n"
+            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7658305988734225671?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "[2](https://www.tiktok.com/@agos_postpartumcare/video/7657206210651016455?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
             "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ*: https://www.tiktok.com/@agos_postpartumcare"
         ),
         
@@ -1150,9 +1222,14 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
     print(f"🔍 DEBUG - Amharic decor_basic exists: {'decor_basic' in CONTENT['am']}")
     
     # Pull the pieces from your dictionary
+    # basic = CONTENT[lang]['decor_basic']
+    # deluxe = CONTENT[lang]['decor_deluxe']
+    # premium = CONTENT[lang]['decor_premium']
     basic = CONTENT[lang]['decor_basic']
     deluxe = CONTENT[lang]['decor_deluxe']
+    mid = CONTENT[lang]['decor_mid']
     premium = CONTENT[lang]['decor_premium']
+    special = CONTENT[lang]['decor_special']
     
     # Combine them into one text string based on language
     if lang == 'en':
@@ -1161,7 +1238,11 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
             "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
             f"{deluxe}\n\n"
             "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"{mid}\n\n"
+            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
             f"{premium}\n\n"
+            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"{special}\n\n"
             "👇 *Choose a package to book:*"
         )
     else:
@@ -1170,23 +1251,31 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
             "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
             f"{deluxe}\n\n"
             "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"{mid}\n\n"
+            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
             f"{premium}\n\n"
+            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"{special}\n\n"
             "👇 *ለማዘዝ አንዱን ይምረጡ፦*"
         )
 
     # Dynamic buttons that change based on language
     if lang == 'en':
         kb = [
-            [InlineKeyboardButton("📝 Book 🔸 Basic - 10,000 ETB", callback_data='d_start_basic')],
-            [InlineKeyboardButton("📝 Book 💎 Deluxe - 20,000 ETB", callback_data='d_start_deluxe')],
-            [InlineKeyboardButton("📝 Book 👑 Premium - 25,000 ETB", callback_data='d_start_premium')],
+            [InlineKeyboardButton("🏥 Book Hospital - 10,000 ETB", callback_data='d_start_10k')],
+            [InlineKeyboardButton("🛋️ Book Home Decor - 15,000 ETB", callback_data='d_start_15k')],
+            [InlineKeyboardButton("💎 Book Deluxe - 20,000 ETB", callback_data='d_start_20k')],
+            [InlineKeyboardButton("👑 Book Premium - 25,000 ETB", callback_data='d_start_25k')],
+            [InlineKeyboardButton("⭐ Book Special - 48,000 ETB", callback_data='d_start_48k')],
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
         ]
     else:
         kb = [
-            [InlineKeyboardButton("🔸 መደበኛ - 10,000 ETB ይዘዙ", callback_data='d_start_basic')],
-            [InlineKeyboardButton("💎 ደልክስ - 20,000 ETB ይዘዙ", callback_data='d_start_deluxe')],
-            [InlineKeyboardButton("👑 ፕሪሚየም - 25,000 ETB ይዘዙ", callback_data='d_start_premium')],
+            [InlineKeyboardButton("🏥 የሆስፒታል ዲኮር - 10,000 ብር ይዘዙ", callback_data='d_start_10k')],
+            [InlineKeyboardButton("🛋️ የቤት ዲኮር - 15,000 ብር ይዘዙ", callback_data='d_start_15k')],
+            [InlineKeyboardButton("💎 ደልክስ ዲኮር - 20,000 ብር ይዘዙ", callback_data='d_start_20k')],
+            [InlineKeyboardButton("👑 ፕሪሚየም ዲኮር - 25,000 ብር ይዘዙ", callback_data='d_start_25k')],
+            [InlineKeyboardButton("⭐ ልዩ ዲኮር - 48,000 ብር ይዘዙ", callback_data='d_start_48k')],
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
         ]
     
@@ -1328,6 +1417,44 @@ async def view_decor_premium(update: Update, context: ContextTypes.DEFAULT_TYPE)
     
     await query.message.edit_text(
         CONTENT[lang]['decor_premium'],
+        reply_markup=InlineKeyboardMarkup(kb),
+        parse_mode='Markdown'
+    )
+
+async def view_decor_mid(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    query = update.callback_query
+    await query.answer()
+    lang = context.user_data.get('lang', 'en')
+    
+    back_text = "🔙 Back to Packages" if lang == 'en' else "🔙 ወደ ፓኬጆች ተመለስ"
+    
+    kb = [
+        [InlineKeyboardButton(CONTENT[lang]['book_now'], callback_data='d_start_20k')],
+        [InlineKeyboardButton(back_text, callback_data='show_decor_packages')],
+        [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
+    ]
+    
+    await query.message.edit_text(
+        CONTENT[lang]['decor_mid'],
+        reply_markup=InlineKeyboardMarkup(kb),
+        parse_mode='Markdown'
+    )
+
+async def view_decor_special(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    query = update.callback_query
+    await query.answer()
+    lang = context.user_data.get('lang', 'en')
+    
+    back_text = "🔙 Back to Packages" if lang == 'en' else "🔙 ወደ ፓኬጆች ተመለስ"
+    
+    kb = [
+        [InlineKeyboardButton(CONTENT[lang]['book_now'], callback_data='d_start_48k')],
+        [InlineKeyboardButton(back_text, callback_data='show_decor_packages')],
+        [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
+    ]
+    
+    await query.message.edit_text(
+        CONTENT[lang]['decor_special'],
         reply_markup=InlineKeyboardMarkup(kb),
         parse_mode='Markdown'
     )
@@ -1556,9 +1683,11 @@ async def d_step6(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # If package wasn't pre-selected, show package selection
     if 'd_pkg' not in context.user_data:
         kb = [
-            [InlineKeyboardButton("Basic - 10,000 ETB", callback_data='15k')],
-            [InlineKeyboardButton("Deluxe - 20,000 ETB", callback_data='20k')],
-            [InlineKeyboardButton("Premium - 25,000 ETB", callback_data='25k')],
+            [InlineKeyboardButton("Hospital - 10,000 ETB", callback_data='15k')],
+            [InlineKeyboardButton("Home - 15,000 ETB", callback_data='20k')],
+            [InlineKeyboardButton("Deluxe - 20,000 ETB", callback_data='25k')],      # NEW
+            [InlineKeyboardButton("Premium - 25,000 ETB", callback_data='30k')],     # CHANGED
+            [InlineKeyboardButton("Special - 48,000 ETB", callback_data='48k')],     # NEW
             [InlineKeyboardButton(CONTENT[lang]['q_back'], callback_data='d_back')],
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='show_decor_packages')]
         ]
@@ -2247,6 +2376,8 @@ if __name__ == '__main__':
     app.add_handler(CallbackQueryHandler(view_decor_basic, pattern='^view_decor_basic$'))
     app.add_handler(CallbackQueryHandler(view_decor_deluxe, pattern='^view_decor_deluxe$'))
     app.add_handler(CallbackQueryHandler(view_decor_premium, pattern='^view_decor_premium$'))
+    app.add_handler(CallbackQueryHandler(view_decor_mid, pattern='^view_decor_mid$'))
+    app.add_handler(CallbackQueryHandler(view_decor_special, pattern='^view_decor_special$'))
     
     app.add_handler(CallbackQueryHandler(view_limo_grand, pattern='^view_limo_grand$'))
     app.add_handler(CallbackQueryHandler(view_limo_special, pattern='^view_limo_special$'))
@@ -2260,9 +2391,11 @@ if __name__ == '__main__':
     # Decor booking conversation handler with package pre-selection
     d_conv = ConversationHandler(
         entry_points=[
-            CallbackQueryHandler(lambda u, c: d_start(u, c, '10k'), pattern='^d_start_basic$'),
-            CallbackQueryHandler(lambda u, c: d_start(u, c, '20k'), pattern='^d_start_deluxe$'),
-            CallbackQueryHandler(lambda u, c: d_start(u, c, '25k'), pattern='^d_start_premium$')
+            CallbackQueryHandler(lambda u, c: d_start(u, c, '10k'), pattern='^d_start_10k$'),
+            CallbackQueryHandler(lambda u, c: d_start(u, c, '15k'), pattern='^d_start_15k$'),
+            CallbackQueryHandler(lambda u, c: d_start(u, c, '20k'), pattern='^d_start_20k$'),
+            CallbackQueryHandler(lambda u, c: d_start(u, c, '25k'), pattern='^d_start_25k$'),
+            CallbackQueryHandler(lambda u, c: d_start(u, c, '48k'), pattern='^d_start_48k$')
         ],
         states={
             D_NAME: [MessageHandler(filters.TEXT & ~filters.COMMAND, d_step1)],

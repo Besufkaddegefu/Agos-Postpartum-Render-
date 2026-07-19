@@ -1241,7 +1241,7 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
             f"{deluxe}\n\n"
             "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
             f"{mid}\n\n"
-            "👇 *ከታች ያሉትን ፓኬጆች ይዘዙ:*"
+            "👇 <b>ከታች ያሉትን ፓኬጆች ይዘዙ</b>"
         )
     
     # Buttons for Page 1
@@ -1264,10 +1264,13 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
     
     # Send ONLY ONE message (edit the existing one)
     try:
+        # Use HTML for Amharic, Markdown for English
+        parse_mode = 'HTML' if lang == 'am' else 'Markdown'
+        
         await query.message.edit_text(
             text,
             reply_markup=InlineKeyboardMarkup(kb),
-            parse_mode='Markdown',
+            parse_mode=parse_mode,
             disable_web_page_preview=True
         )
     except Exception as e:
@@ -1282,7 +1285,7 @@ async def decor_show_page(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Switch between decor package pages"""
     query = update.callback_query
     await query.answer()
-    lang = context.user_data.get('lang', 'en')  # ← Get language from user_data
+    lang = context.user_data.get('lang', 'en')
     
     basic = CONTENT[lang]['decor_basic']
     deluxe = CONTENT[lang]['decor_deluxe']
@@ -1309,10 +1312,9 @@ async def decor_show_page(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 f"{deluxe}\n\n"
                 "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
                 f"{mid}\n\n"
-                "👇 *ከታች ያሉትን ፓኬጆች ይዘዙ:*"
+                "👇 <b>ከታች ያሉትን ፓኬጆች ይዘዙ</b>"
             )
         
-        # ← FIX: Buttons now change based on language
         if lang == 'en':
             kb = [
                 [InlineKeyboardButton("📝 Book Basic - 10,000 ETB", callback_data='d_start_10k')],
@@ -1345,10 +1347,9 @@ async def decor_show_page(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 f"{premium}\n\n"
                 "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
                 f"{special}\n\n"
-                "👇 *ከታች ያሉትን ፓኬጆች ይዘዙ:*"
+                "👇 <b>ከታች ያሉትን ፓኬጆች ይዘዙ</b>"
             )
         
-        # ← FIX: Buttons now change based on language
         if lang == 'en':
             kb = [
                 [InlineKeyboardButton("📝 Book Premium - 25,000 ETB", callback_data='d_start_25k')],
@@ -1366,10 +1367,13 @@ async def decor_show_page(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     # Edit the SAME message
     try:
+        # Use HTML for Amharic, Markdown for English
+        parse_mode = 'HTML' if lang == 'am' else 'Markdown'
+        
         await query.message.edit_text(
             text,
             reply_markup=InlineKeyboardMarkup(kb),
-            parse_mode='Markdown',
+            parse_mode=parse_mode,
             disable_web_page_preview=True
         )
     except Exception as e:

@@ -1282,7 +1282,7 @@ async def decor_show_page(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Switch between decor package pages"""
     query = update.callback_query
     await query.answer()
-    lang = context.user_data.get('lang', 'en')
+    lang = context.user_data.get('lang', 'en')  # ← Get language from user_data
     
     basic = CONTENT[lang]['decor_basic']
     deluxe = CONTENT[lang]['decor_deluxe']
@@ -1312,13 +1312,23 @@ async def decor_show_page(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 "👇 *ከታች ያሉትን ፓኬጆች ይዘዙ:*"
             )
         
-        kb = [
-            [InlineKeyboardButton("📝 Book Basic - 10,000 ETB", callback_data='d_start_10k')],
-            [InlineKeyboardButton("📝 Book Home - 15,000 ETB", callback_data='d_start_15k')],
-            [InlineKeyboardButton("📝 Book Deluxe - 20,000 ETB", callback_data='d_start_20k')],
-            [InlineKeyboardButton("➡️ Next: Premium & Special", callback_data='decor_show_page2')],
-            [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
-        ]
+        # ← FIX: Buttons now change based on language
+        if lang == 'en':
+            kb = [
+                [InlineKeyboardButton("📝 Book Basic - 10,000 ETB", callback_data='d_start_10k')],
+                [InlineKeyboardButton("📝 Book Home - 15,000 ETB", callback_data='d_start_15k')],
+                [InlineKeyboardButton("📝 Book Deluxe - 20,000 ETB", callback_data='d_start_20k')],
+                [InlineKeyboardButton("➡️ Next: Premium & Special", callback_data='decor_show_page2')],
+                [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
+            ]
+        else:
+            kb = [
+                [InlineKeyboardButton("📝 መሰረታዊ ይዘዙ - 10,000 ብር", callback_data='d_start_10k')],
+                [InlineKeyboardButton("📝 የቤት ይዘዙ - 15,000 ብር", callback_data='d_start_15k')],
+                [InlineKeyboardButton("📝 ደልክስ ይዘዙ - 20,000 ብር", callback_data='d_start_20k')],
+                [InlineKeyboardButton("➡️ ቀጣይ: ፕሪሚየም እና ልዩ", callback_data='decor_show_page2')],
+                [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
+            ]
     
     # If user clicked "Next: Premium & Special"
     else:  # decor_show_page2
@@ -1338,14 +1348,23 @@ async def decor_show_page(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 "👇 *ከታች ያሉትን ፓኬጆች ይዘዙ:*"
             )
         
-        kb = [
-            [InlineKeyboardButton("📝 Book Premium - 25,000 ETB", callback_data='d_start_25k')],
-            [InlineKeyboardButton("📝 Book Special - 48,000 ETB", callback_data='d_start_48k')],
-            [InlineKeyboardButton("⬅️ Back to Basic Packages", callback_data='decor_show_page1')],
-            [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
-        ]
+        # ← FIX: Buttons now change based on language
+        if lang == 'en':
+            kb = [
+                [InlineKeyboardButton("📝 Book Premium - 25,000 ETB", callback_data='d_start_25k')],
+                [InlineKeyboardButton("📝 Book Special - 48,000 ETB", callback_data='d_start_48k')],
+                [InlineKeyboardButton("⬅️ Back to Basic Packages", callback_data='decor_show_page1')],
+                [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
+            ]
+        else:
+            kb = [
+                [InlineKeyboardButton("📝 ፕሪሚየም ይዘዙ - 25,000 ብር", callback_data='d_start_25k')],
+                [InlineKeyboardButton("📝 ልዩ ይዘዙ - 48,000 ብር", callback_data='d_start_48k')],
+                [InlineKeyboardButton("⬅️ ወደ መሰረታዊ ፓኬጆች", callback_data='decor_show_page1')],
+                [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
+            ]
     
-    # Edit the SAME message (not send a new one)
+    # Edit the SAME message
     try:
         await query.message.edit_text(
             text,

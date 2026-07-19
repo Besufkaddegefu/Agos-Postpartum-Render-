@@ -55,17 +55,36 @@ print("DEBUG - Admin IDs:", ADMIN_IDS)
 (PH_NAME, PH_PHONE, PH_USERNAME, PH_DATE, PH_ADDR, PH_PACKAGE, PH_PAYMENT) = range(70, 77)  # Added PH_USERNAME
 
 # --- WORKING HOURS CHECK ---
+# --- WORKING HOURS CHECK ---
 def is_within_working_hours():
     """
     Check if current time is within working hours (8 AM - 8 PM LT)
     During these hours, bot should be OFFLINE
     """
-    # Get current time in Ethiopian time zone
-    ethiopia_now = datetime.now(ETHIOPIA_TZ)
-    current_hour = ethiopia_now.hour
+    # ✅ TESTING MODE: Bot always online
+    # Remove this line when testing is done
+    return False
     
-    # Return True if within working hours (bot should be OFFLINE)
-    return WORKING_HOURS_START <= current_hour < WORKING_HOURS_END
+    # ⬇️⬇️⬇️ ORIGINAL CODE - COMMENTED OUT FOR TESTING ⬇️⬇️⬇️
+    # # Get current time in Ethiopian time zone
+    # ethiopia_now = datetime.now(ETHIOPIA_TZ)
+    # current_hour = ethiopia_now.hour
+    
+    # # Return True if within working hours (bot should be OFFLINE)
+    # return WORKING_HOURS_START <= current_hour < WORKING_HOURS_END
+
+# --- WORKING HOURS CHECK ---
+# def is_within_working_hours():
+#     """
+#     Check if current time is within working hours (8 AM - 8 PM LT)
+#     During these hours, bot should be OFFLINE
+#     """
+#     # Get current time in Ethiopian time zone
+#     ethiopia_now = datetime.now(ETHIOPIA_TZ)
+#     current_hour = ethiopia_now.hour
+    
+#     # Return True if within working hours (bot should be OFFLINE)
+#     return WORKING_HOURS_START <= current_hour < WORKING_HOURS_END
 
 
 def get_webhook_url():
@@ -1178,55 +1197,48 @@ async def show_discover_more(update: Update, context: ContextTypes.DEFAULT_TYPE,
         reply_markup=InlineKeyboardMarkup(discover_buttons)
     )
 
-# --- PACKAGE DISPLAY FUNCTIONS ---   
 # --- PACKAGE DISPLAY FUNCTIONS ---
 async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Show all decor packages with booking buttons"""
     query = update.callback_query
     await query.answer()
     
     # Correctly identify the user's language
     lang = context.user_data.get('lang', 'en')
     
-    # Debug prints to verify
-    print(f"🔍 DEBUG - Showing decor packages in language: {lang}")
-    print(f"🔍 DEBUG - Amharic decor_basic exists: {'decor_basic' in CONTENT['am']}")
-
-    package_sections = [
-        CONTENT[lang]['decor_basic'],
-        CONTENT[lang]['decor_deluxe'],
-        CONTENT[lang]['decor_mid'],
-        CONTENT[lang]['decor_premium'],
-        CONTENT[lang]['decor_special'],
-    ]
-    combined_text = "\n\n━━━━━━━━━━━━━━━━━━━━━━━━━\n\n".join(package_sections)
-
+    # Pull the pieces from your dictionary
+    basic = CONTENT[lang]['decor_basic']
+    deluxe = CONTENT[lang]['decor_deluxe']
+    mid = CONTENT[lang]['decor_mid']
+    premium = CONTENT[lang]['decor_premium']
+    special = CONTENT[lang]['decor_special']
+    
+    # Combine them into one text string
     if lang == 'en':
-        await query.message.reply_text(
-            combined_text,
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("🏥 Book Hospital - 10,000 ETB", callback_data='d_start_10k')],
-                [InlineKeyboardButton("🛋️ Book Home Decor - 15,000 ETB", callback_data='d_start_15k')],
-                [InlineKeyboardButton("💎 Book Deluxe - 20,000 ETB", callback_data='d_start_20k')],
-                [InlineKeyboardButton("👑 Book Premium - 25,000 ETB", callback_data='d_start_25k')],
-                [InlineKeyboardButton("⭐ Book Special - 48,000 ETB", callback_data='d_start_48k')],
-                [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
-            ]),
-            parse_mode='Markdown',
-            disable_web_page_preview=True
+        text = (
+            f"{basic}\n\n"
+            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"{deluxe}\n\n"
+            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"{mid}\n\n"
+            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"{premium}\n\n"
+            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"{special}\n\n"
+            "👇 *Choose a package to book:*"
         )
     else:
-        # Amharic content stays plain text so a markdown issue does not block the response.
-        await query.message.reply_text(
-            combined_text,
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("🏥 የሆስፒታል ዲኮር - 10,000 ብር ይዘዙ", callback_data='d_start_10k')],
-                [InlineKeyboardButton("🛋️ የቤት ዲኮር - 15,000 ብር ይዘዙ", callback_data='d_start_15k')],
-                [InlineKeyboardButton("💎 ደልክስ ዲኮር - 20,000 ብር ይዘዙ", callback_data='d_start_20k')],
-                [InlineKeyboardButton("👑 ፕሪሚየም ዲኮር - 25,000 ብር ይዘዙ", callback_data='d_start_25k')],
-                [InlineKeyboardButton("⭐ ልዩ ዲኮር - 48,000 ብር ይዘዙ", callback_data='d_start_48k')],
-                [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
-            ]),
-            disable_web_page_preview=True
+        text = (
+            f"{basic}\n\n"
+            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"{deluxe}\n\n"
+            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"{mid}\n\n"
+            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"{premium}\n\n"
+            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"{special}\n\n"
+            "👇 *ለማዘዝ አንዱን ይምረጡ፦*"
         )
 
     # Dynamic buttons that change based on language
@@ -1249,22 +1261,108 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
         ]
     
-    final_text = "👇 *Choose a package to book:*" if lang == 'en' else "👇 *ለማዘዝ አንዱን ይምረጡ፦*"
-
     try:
-        await query.message.reply_text(
-            final_text,
-            reply_markup=InlineKeyboardMarkup(kb),
-            parse_mode='Markdown',
+        # Use edit_text for both languages - THIS IS THE KEY FIX
+        await query.message.edit_text(
+            text, 
+            reply_markup=InlineKeyboardMarkup(kb), 
+            parse_mode='Markdown', 
             disable_web_page_preview=True
         )
     except Exception as e:
         print(f"Markdown error: {e}")
-        await query.message.reply_text(
-            final_text,
-            reply_markup=InlineKeyboardMarkup(kb),
+        # Fallback: if there's any weird character, show it as plain text
+        await query.message.edit_text(
+            text, 
+            reply_markup=InlineKeyboardMarkup(kb), 
             disable_web_page_preview=True
-        )
+        )   
+# --- PACKAGE DISPLAY FUNCTIONS ---
+# async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE):
+#     query = update.callback_query
+#     await query.answer()
+    
+#     # Correctly identify the user's language
+#     lang = context.user_data.get('lang', 'en')
+    
+#     # Debug prints to verify
+#     print(f"🔍 DEBUG - Showing decor packages in language: {lang}")
+#     print(f"🔍 DEBUG - Amharic decor_basic exists: {'decor_basic' in CONTENT['am']}")
+
+#     package_sections = [
+#         CONTENT[lang]['decor_basic'],
+#         CONTENT[lang]['decor_deluxe'],
+#         CONTENT[lang]['decor_mid'],
+#         CONTENT[lang]['decor_premium'],
+#         CONTENT[lang]['decor_special'],
+#     ]
+#     combined_text = "\n\n━━━━━━━━━━━━━━━━━━━━━━━━━\n\n".join(package_sections)
+
+#     if lang == 'en':
+#         await query.message.reply_text(
+#             combined_text,
+#             reply_markup=InlineKeyboardMarkup([
+#                 [InlineKeyboardButton("🏥 Book Hospital - 10,000 ETB", callback_data='d_start_10k')],
+#                 [InlineKeyboardButton("🛋️ Book Home Decor - 15,000 ETB", callback_data='d_start_15k')],
+#                 [InlineKeyboardButton("💎 Book Deluxe - 20,000 ETB", callback_data='d_start_20k')],
+#                 [InlineKeyboardButton("👑 Book Premium - 25,000 ETB", callback_data='d_start_25k')],
+#                 [InlineKeyboardButton("⭐ Book Special - 48,000 ETB", callback_data='d_start_48k')],
+#                 [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
+#             ]),
+#             parse_mode='Markdown',
+#             disable_web_page_preview=True
+#         )
+#     else:
+#         # Amharic content stays plain text so a markdown issue does not block the response.
+#         await query.message.reply_text(
+#             combined_text,
+#             reply_markup=InlineKeyboardMarkup([
+#                 [InlineKeyboardButton("🏥 የሆስፒታል ዲኮር - 10,000 ብር ይዘዙ", callback_data='d_start_10k')],
+#                 [InlineKeyboardButton("🛋️ የቤት ዲኮር - 15,000 ብር ይዘዙ", callback_data='d_start_15k')],
+#                 [InlineKeyboardButton("💎 ደልክስ ዲኮር - 20,000 ብር ይዘዙ", callback_data='d_start_20k')],
+#                 [InlineKeyboardButton("👑 ፕሪሚየም ዲኮር - 25,000 ብር ይዘዙ", callback_data='d_start_25k')],
+#                 [InlineKeyboardButton("⭐ ልዩ ዲኮር - 48,000 ብር ይዘዙ", callback_data='d_start_48k')],
+#                 [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
+#             ]),
+#             disable_web_page_preview=True
+#         )
+
+#     # Dynamic buttons that change based on language
+#     if lang == 'en':
+#         kb = [
+#             [InlineKeyboardButton("🏥 Book Hospital - 10,000 ETB", callback_data='d_start_10k')],
+#             [InlineKeyboardButton("🛋️ Book Home Decor - 15,000 ETB", callback_data='d_start_15k')],
+#             [InlineKeyboardButton("💎 Book Deluxe - 20,000 ETB", callback_data='d_start_20k')],
+#             [InlineKeyboardButton("👑 Book Premium - 25,000 ETB", callback_data='d_start_25k')],
+#             [InlineKeyboardButton("⭐ Book Special - 48,000 ETB", callback_data='d_start_48k')],
+#             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
+#         ]
+#     else:
+#         kb = [
+#             [InlineKeyboardButton("🏥 የሆስፒታል ዲኮር - 10,000 ብር ይዘዙ", callback_data='d_start_10k')],
+#             [InlineKeyboardButton("🛋️ የቤት ዲኮር - 15,000 ብር ይዘዙ", callback_data='d_start_15k')],
+#             [InlineKeyboardButton("💎 ደልክስ ዲኮር - 20,000 ብር ይዘዙ", callback_data='d_start_20k')],
+#             [InlineKeyboardButton("👑 ፕሪሚየም ዲኮር - 25,000 ብር ይዘዙ", callback_data='d_start_25k')],
+#             [InlineKeyboardButton("⭐ ልዩ ዲኮር - 48,000 ብር ይዘዙ", callback_data='d_start_48k')],
+#             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
+#         ]
+    
+#     final_text = "👇 *Choose a package to book:*" if lang == 'en' else "👇 *ለማዘዝ አንዱን ይምረጡ፦*"
+
+#     try:
+#         await query.message.reply_text(
+#             final_text,
+#             reply_markup=InlineKeyboardMarkup(kb),
+#             parse_mode='Markdown',
+#             disable_web_page_preview=True
+#         )
+#     except Exception as e:
+#         print(f"Markdown error: {e}")
+#         await query.message.reply_text(
+#             final_text,
+#             reply_markup=InlineKeyboardMarkup(kb),
+#             disable_web_page_preview=True
+#         )
 
 async def show_limo_packages(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query

@@ -197,6 +197,32 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
     return ConversationHandler.END
 
+async def change_language(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """
+    Handle the Change Language button
+    Shows language selection WITHOUT clearing user data
+    """
+    query = update.callback_query
+    await query.answer()
+    
+    # Check if bot is offline
+    if await working_hours_gate(update, context):
+        return ConversationHandler.END
+    
+    # Show language selection (keeps user data intact)
+    keyboard = [
+        [InlineKeyboardButton("English 🇺🇸", callback_data='lang_en')],
+        [InlineKeyboardButton("አማርኛ 🇪🇹", callback_data='lang_am')]
+    ]
+    
+    # Delete the old message and send new one
+    await query.message.delete()
+    await query.message.reply_text(
+        "🌿 Choose Language / ቋንቋ ይምረጡ:", 
+        reply_markup=InlineKeyboardMarkup(keyboard)
+    )
+    return ConversationHandler.END
+
 # --- MODIFIED AFTER HOURS HANDLER ---
 async def after_hours_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Handle the 'after_hours' callback - now just checks working hours"""
@@ -237,7 +263,7 @@ async def show_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, lang: st
         [InlineKeyboardButton(btns[2], callback_data='show_photo_packages'), 
          InlineKeyboardButton(btns[3], callback_data='info_contact')],
         [InlineKeyboardButton(btns[4], callback_data='send_pdf')],
-        [InlineKeyboardButton(CONTENT[lang]['change_lang'], callback_data='restart')]
+        [InlineKeyboardButton(CONTENT[lang]['change_lang'], callback_data='change_lang')]
     ]
     
     query = update.callback_query
@@ -2320,7 +2346,9 @@ if __name__ == '__main__':
     app.add_handler(CallbackQueryHandler(show_menu, pattern='^menu$'))
     app.add_handler(CallbackQueryHandler(info_contact, pattern='^info_contact$'))
     app.add_handler(CallbackQueryHandler(send_services_pdf, pattern='^send_pdf$'))
-    app.add_handler(CallbackQueryHandler(start, pattern='^restart$'))
+    app.add_handler(CallbackQueryHandler(change_language, pattern='^restart$'))
+   
+  
     
     app.add_handler(d_conv)
     app.add_handler(l_conv)

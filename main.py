@@ -312,8 +312,8 @@ CONTENT = {
             "• Helium balloon that floats on air for 8 hours.\n\n"
             "🏥 *Perfect for hospital arrivals!*\n\n"
             "📱 *👇👇👇See the previous projects we have done for 10,000 birr 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7656368390524701970) | "
-            "[2](https://www.tiktok.com/@agos_postpartumcare/video/7656368390524701970)\n\n"
+            "[1](https://shorturl.at/BObi6) | "
+            "[2](https://shorturl.at/92EKH)\n\n"
             "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         'decor_deluxe': (
@@ -325,9 +325,9 @@ CONTENT = {
             "• Salon Decoration\n\n"
             "🛋️ *Complete home transformation!*\n\n"
             "📱 *👇👇👇See the previous projects we have done for 15,000 birr 👇👇👇:*\n"
-            "[1](https://vm.tiktok.com/ZMA2PV8vt) | "
-            "[2](https://vt.tiktok.com/ZSmoGPTJ6) | "
-            "[3](https://www.tiktok.com/@agos_postpartumcare/video/7595961687560310028?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "[1](https://shorturl.at/fdSwE) | "
+            "[2](https://shorturl.at/itgVZ) | "
+            "[3](https://shorturl.at/kAPHt) | "
             "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         'decor_mid': (
@@ -340,12 +340,12 @@ CONTENT = {
             "• 2 Kg Normal Cake\n\n"
             "🎂 *Beautiful celebration package!*\n\n"
             "📱 *👇👇👇See the previous projects we have done for 20,000 birr 👇👇👇:*\n"
-            "[1](https://vm.tiktok.com/ZMA2PQp4k) | "
-            "[2](https://vm.tiktok.com/ZMA2PPv9g) | "
-            "[3](https://vm.tiktok.com/ZMA2PbLWU) | "
-            "[4](https://www.tiktok.com/@agos_postpartumcare/video/7633445361310256392?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-            "[5](https://vm.tiktok.com/ZMA2PG9Nd) | "
-            "[6](https://www.tiktok.com/@agos_postpartumcare/video/7582229397864975672?is_from_webapp=1&sender_device=pc) | "
+            "[1](https://l1nk.dev/7dr6vom) | "
+            "[2](https://l1nk.dev/bu860k9) | "
+            "[3](https://acesse.one/wuasbfi) | "
+            "[4](https://short.do/yIUfyu) | "
+            "[5](https://acesse.one/a49c8z7)\n\n"
+            "[6](https://short.do/Tpvgp_)\n\n"
             "🌟 *Our most popular choice!*\n\n"
             "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
         ),
@@ -360,15 +360,15 @@ CONTENT = {
             "• Bedroom decor → Agober rent for 2weeks\n\n"
             "🎂 *Complete celebration package!*\n\n"
             "📱 *👇👇👇See the previous projects we have done for 25,000 birr 👇👇👇:*\n"
-            "[1](https://vm.tiktok.com/ZMA2Pb9Pp) | "
-            "[2](https://vm.tiktok.com/ZMA2Pq1V8) | "
-            "[3](https://vt.tiktok.com/ZSmos7LjV) | "
-            "[4](https://vm.tiktok.com/ZMA2PqRTh) | "
-            "[5](https://www.tiktok.com/@agos_postpartumcare/video/7641236350917856519?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-            "[6](https://www.tiktok.com/@agos_postpartumcare/video/7551840674677591352?_r=1&_t=ZM-914EEFmhm03) | "
-            "[7](https://www.tiktok.com/@agos_postpartumcare/video/7608210303792188690?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-            "[8](https://vt.tiktok.com/ZSmostdmb) | "
-            "[9](https://www.tiktok.com/@agos_postpartumcare/video/7637532507528858887?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "[1](https://acesse.one/euoqzqe) | "
+            "[2](https://l1nk.dev/mrp2t8o) | "
+            "[3](https://acesse.one/ixazz0n) | "
+            "[4](https://l1nk.dev/ou79x8q) | "
+            "[5](https://short.do/oHBlnR) | "
+            "[6](https://short.do/gvsPGl) | "
+            "[7](https://acesse.one/p52mu20) | "
+            "[8](https://l1nk.dev/lmz8t3g) | "
+            "[9](https://acesse.one/w9xdl1x) | "
             "👑 *The ultimate luxury experience!*\n\n"
             "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
         ),
@@ -385,9 +385,9 @@ CONTENT = {
             "• Beautiful organic balloon bouquet to add charm to your celebration\n"
             "✨ *The ultimate luxury experience!*\n\n"
             "📱 *👇👇👇See the previous projects we have done for 25,000 birr 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7658305988734225671?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7657206210651016455?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-             "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
+            "[1](https://acesse.one/z8tmcmg) | "
+            "[2](https://acesse.one/nb4rfw2) | "
+            "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
         ),
         
         # Limousine Package Pages with Book Buttons
@@ -398,6 +398,8 @@ CONTENT = {
             "• Grand and elegant ride home\n"
             "• Professional chauffeur\n"
             "• Comfort and style\n\n"
+            "📱 *👇👇👇See the previous projects we have done for 35,000 birr 👇👇👇:*\n"
+            "[1](https://acesse.one/h0f8mjg) | "
             "🚗 *Make a stylish entrance!*\n\n"
             "⚠️ *Prices may vary depending on conditions such as weekdays, seasonal demand (e.g., wedding seasons), and the time the order is placed.*\n\n"
             "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
@@ -410,7 +412,7 @@ CONTENT = {
             "• Professional chauffeur\n"
             "• Premium comfort and style\n\n"
             "📱 *👇👇👇See the previous projects we have done for 45,000 birr 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7566665605512809740?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "[1](https://l1nk.dev/1fk8lhr) | "
             "✨ *Extra touches for a special day!*\n\n"
             "⚠️ *Prices may vary depending on conditions such as weekdays, seasonal demand (e.g., wedding seasons), and the time the order is placed.*\n\n"
             "👉 *For more videos, visit our TikTok page at: https://www.tiktok.com/@agos_postpartumcare*"
@@ -423,7 +425,7 @@ CONTENT = {
             "• Professional chauffeur in formal attire\n"
             "• Ultimate comfort and elegance\n\n"
             "📱 *👇👇👇See the previous projects we have done for 50,000 birr 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@gracystore12/video/7657271549036137749?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "[1](https://l1nk.dev/qts49kj) | "
             "👑 *Royal treatment for royalty!*\n\n"
             "📞 *Contact us for pricing and availability*\n"
             "📱 +251 967 621 545 | +251 980 040 468\n\n"
@@ -548,8 +550,8 @@ CONTENT = {
             "• መካከለኛ መጠን ያለው እቅፍ አበባ\n"
             "• ለ ስምንት ሰአታት አየር ላይ መንሳፈፍ የሚችሉ በሂልየም ጋዝ የተሞሉ ፊኛዎች\n\n"
             "📱 *👇👇👇ከዚህ በፊት በ 10,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7656368390524701970) | "
-            "[2](https://www.tiktok.com/@agos_postpartumcare/video/7656368390524701970)\n\n"
+            "[1](https://shorturl.at/BObi6) | "
+            "[2](https://shorturl.at/92EKH)\n\n"
             "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ*: https://www.tiktok.com/@agos_postpartumcare"
         ),
         'decor_deluxe': (
@@ -560,9 +562,9 @@ CONTENT = {
             "• የኮሪደር ዲኮር\n"
             "• የሳሎን ዲኮር\n\n"
             "📱 *👇👇👇ከዚህ በፊት በ 15,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7543272773913808184?_r=1&_d=secCgYIASAHKAESPgo8LCuNoqBP%2FZU%2B6r52Ol0jeLOVx7DPloJ%2BzdN%2B6bAcHgpdMTlqIvG5%2F28vE128nMfePejDle4YblRaxLYCGgA%3D&u_code=efji3644kklcd9&share_item_id=7543272773913808184&timestamp=1756403847&utm_campaign=client_share&utm_source=short_fallback&share_app_id=1233) | "
-            "[2](https://www.tiktok.com/@agos_postpartumcare/video/7580389581950831928?_r=1&_d=secCgYIASAHKAESPgo8cjCGVV6EETZKLxhoimndu6HloEoXY6cxVcqOJv%2Bnz5c3AuBQwwenoa7TnA53HQ9qL7uxZrAm9kpUxXfmGgA%3D&u_code=dc878fgkllb8i9&share_item_id=7580389581950831928&timestamp=1772621151&utm_campaign=client_share&utm_source=short_fallback&share_app_id=1233) | "
-            "[3](https://www.tiktok.com/@agos_postpartumcare/video/7595961687560310028?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "[1](https://shorturl.at/fdSwE) | "
+            "[2](https://shorturl.at/itgVZ) | "
+            "[3](https://shorturl.at/kAPHt) | "
             "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ*: https://www.tiktok.com/@agos_postpartumcare"
         ),
         'decor_mid': (
@@ -574,12 +576,12 @@ CONTENT = {
             "• መካከለኛ መጠን ያለው እቅፍ አበባ እናየመሬት አበባ\n"
             "• ሁለት (2) ኪሎ መደበኛ ኬክ\n\n"
             "📱 *👇👇👇ከዚህ በፊት በ 20,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:*\n"
-            "[1](https://vm.tiktok.com/ZMA2PQp4k) | "
-            "[2](https://vm.tiktok.com/ZMA2PPv9g) | "
-            "[3](https://vm.tiktok.com/ZMA2PbLWU) | "
-            "[4](https://www.tiktok.com/@agos_postpartumcare/video/7633445361310256392?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-            "[5](https://vm.tiktok.com/ZMA2PG9Nd)\n\n"
-            "[6](https://www.tiktok.com/@agos_postpartumcare/video/7582229397864975672?is_from_webapp=1&sender_device=pc)\n\n"
+            "[1](https://l1nk.dev/7dr6vom) | "
+            "[2](https://l1nk.dev/bu860k9) | "
+            "[3](https://acesse.one/wuasbfi) | "
+            "[4](https://short.do/yIUfyu) | "
+            "[5](https://acesse.one/a49c8z7)\n\n"
+            "[6](https://short.do/Tpvgp_)\n\n"
             "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ*: https://www.tiktok.com/@agos_postpartumcare"
         ),
         'decor_premium': (
@@ -591,15 +593,15 @@ CONTENT = {
             "• ትልቅ መጠን ያለው እቅፍ አበባ እና የመሬትአበባ\n"
             "• ሁለት (2) ኪሎ ኬክ በመረጡት ዲዛይን\n\n"
             "📱 *👇👇👇ከዚህ በፊት በ 25,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:*\n"
-            "[1](https://vm.tiktok.com/ZMA2Pb9Pp) | "
-            "[2](https://vm.tiktok.com/ZMA2Pq1V8) | "
-            "[3](https://vt.tiktok.com/ZSmos7LjV) | "
-            "[4](https://vm.tiktok.com/ZMA2PqRTh) | "
-            "[5](https://www.tiktok.com/@agos_postpartumcare/video/7641236350917856519?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-            "[6](https://www.tiktok.com/@agos_postpartumcare/video/7551840674677591352?_r=1&_t=ZM-914EEFmhm03) | "
-            "[7](https://www.tiktok.com/@agos_postpartumcare/video/7608210303792188690?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-            "[8](https://vt.tiktok.com/ZSmostdmb) | "
-            "[9](https://www.tiktok.com/@agos_postpartumcare/video/7637532507528858887?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "[1](https://acesse.one/euoqzqe) | "
+            "[2](https://l1nk.dev/mrp2t8o) | "
+            "[3](https://acesse.one/ixazz0n) | "
+            "[4](https://l1nk.dev/ou79x8q) | "
+            "[5](https://short.do/oHBlnR) | "
+            "[6](https://short.do/gvsPGl) | "
+            "[7](https://acesse.one/p52mu20) | "
+            "[8](https://l1nk.dev/lmz8t3g) | "
+            "[9](https://acesse.one/w9xdl1x) | "
             "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ*: https://www.tiktok.com/@agos_postpartumcare"
         ),
         'decor_special': (
@@ -617,8 +619,8 @@ CONTENT = {
             "• በተለያዩ መጠኖች የተሰራ የፊኛ እቅፍ\n\n"
             "✨ *የበለጠ ልዩ ልምድ!*\n\n" 
             "📱 *👇👇👇ከዚህ በፊት በ 48,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7658305988734225671?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
-            "[2](https://www.tiktok.com/@agos_postpartumcare/video/7657206210651016455?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "[1](https://acesse.one/z8tmcmg) | "
+            "[2](https://acesse.one/nb4rfw2) | "
             "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ*: https://www.tiktok.com/@agos_postpartumcare"
         ),
         
@@ -630,7 +632,7 @@ CONTENT = {
             "• ታላቅ እና የሚያምር ጉዞ\n"
             "• ፕሮፌሽናል ሾፌር\n\n"
             "📱 *👇👇👇ከዚህ በፊት በ 48,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7566665605512809740) | "
+            "[1](https://acesse.one/h0f8mjg) | "
             "🚗 *በታላቅ አቀባበል ይግቡ!*\n\n"
             "⚠️ *ዋጋዉ እንደየሁኔታው ሊለያይ ይችላል ፤ ለምሳሌ እንደ ቀናት(የስራ ወይም ረፍት ቀናት) ፣ ወቅታዊ ሁኔታ (እንደ ሰርግ ጊዜያት) እና ትዕዛዝ የሚሰጥበት ሰዓት ሊለያይ ይችላል።*\n\n"
             "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ፦: https://www.tiktok.com/@agos_postpartumcare*"
@@ -642,7 +644,7 @@ CONTENT = {
             "• የተሻለ እና የሚያምር ጉዞ\n"
             "• ፕሮፌሽናል ሾፌር\n\n"
             "📱 *👇👇👇ከዚህ በፊት በ 48,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@agos_postpartumcare/video/7566665605512809740?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "[1](https://l1nk.dev/1fk8lhr) | "
             "✨ *ልዩ ቀንን የበለጠ ልዩ ያድርጉ!*\n\n"
             "⚠️ *ዋጋዉ እንደየሁኔታው ሊለያይ ይችላል ፤ ለምሳሌ እንደ ቀናት(የስራ ወይም ረፍት ቀናት) ፣ ወቅታዊ ሁኔታ (እንደ ሰርግ ጊዜያት) እና ትዕዛዝ የሚሰጥበት ሰዓት ሊለያይ ይችላል።*\n\n"
             "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ፦: https://www.tiktok.com/@agos_postpartumcare*"
@@ -654,7 +656,7 @@ CONTENT = {
             "• ንጉሣዊ አቀባበል\n"
             "• ፕሮፌሽናል ሾፌር \n\n"
             "📱 *👇👇👇ከዚህ በፊት በ 48,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:*\n"
-            "[1](https://www.tiktok.com/@gracystore12/video/7657271549036137749?is_from_webapp=1&sender_device=pc&web_id=7630899321995806229) | "
+            "[1](https://l1nk.dev/qts49kj) | "
             "👑 *ንጉሣዊ አገልግሎት ለንጉሣዊ ደንበኞች!*\n\n"
             "📞 *ዋጋ እና አቅርቦት ለማወቅ ያግኙን:*\n"
             "📱 +251 967 621 545 | +251 980 040 468\n\n"
@@ -1222,9 +1224,9 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
     premium = CONTENT[lang]['decor_premium']
     special = CONTENT[lang]['decor_special']
     
-    # ====== MESSAGE 1: First 3 Packages (Basic, Deluxe, Mid) ======
+    # ====== PAGE 1: First 3 Packages (Basic, Deluxe, Mid) ======
     if lang == 'en':
-        text1 = (
+        text = (
             f"{basic}\n\n"
             "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
             f"{deluxe}\n\n"
@@ -1233,7 +1235,7 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
             "👇 *Book these packages below:*"
         )
     else:
-        text1 = (
+        text = (
             f"{basic}\n\n"
             "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
             f"{deluxe}\n\n"
@@ -1242,9 +1244,9 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
             "👇 *ከታች ያሉትን ፓኬጆች ይዘዙ:*"
         )
     
-    # Buttons for Message 1
+    # Buttons for Page 1
     if lang == 'en':
-        kb1 = [
+        kb = [
             [InlineKeyboardButton("📝 Book Basic - 10,000 ETB", callback_data='d_start_10k')],
             [InlineKeyboardButton("📝 Book Home - 15,000 ETB", callback_data='d_start_15k')],
             [InlineKeyboardButton("📝 Book Deluxe - 20,000 ETB", callback_data='d_start_20k')],
@@ -1252,7 +1254,7 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
         ]
     else:
-        kb1 = [
+        kb = [
             [InlineKeyboardButton("📝 መሰረታዊ ይዘዙ - 10,000 ብር", callback_data='d_start_10k')],
             [InlineKeyboardButton("📝 የቤት ይዘዙ - 15,000 ብር", callback_data='d_start_15k')],
             [InlineKeyboardButton("📝 ደልክስ ይዘዙ - 20,000 ብር", callback_data='d_start_20k')],
@@ -1260,61 +1262,21 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
         ]
     
-    # ====== MESSAGE 2: Last 2 Packages (Premium, Special) ======
-    if lang == 'en':
-        text2 = (
-            f"{premium}\n\n"
-            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"{special}\n\n"
-            "👇 *Book these packages below:*"
-        )
-    else:
-        text2 = (
-            f"{premium}\n\n"
-            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"{special}\n\n"
-            "👇 *ከታች ያሉትን ፓኬጆች ይዘዙ:*"
-        )
-    
-    # Buttons for Message 2
-    if lang == 'en':
-        kb2 = [
-            [InlineKeyboardButton("📝 Book Premium - 25,000 ETB", callback_data='d_start_25k')],
-            [InlineKeyboardButton("📝 Book Special - 48,000 ETB", callback_data='d_start_48k')],
-            [InlineKeyboardButton("⬅️ Back to Basic Packages", callback_data='decor_show_page1')],
-            [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
-        ]
-    else:
-        kb2 = [
-            [InlineKeyboardButton("📝 ፕሪሚየም ይዘዙ - 25,000 ብር", callback_data='d_start_25k')],
-            [InlineKeyboardButton("📝 ልዩ ይዘዙ - 48,000 ብር", callback_data='d_start_48k')],
-            [InlineKeyboardButton("⬅️ ወደ መሰረታዊ ፓኬጆች", callback_data='decor_show_page1')],
-            [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
-        ]
-    
-    # Send Message 1 (edit the existing message)
+    # Send ONLY ONE message (edit the existing one)
     try:
         await query.message.edit_text(
-            text1,
-            reply_markup=InlineKeyboardMarkup(kb1),
+            text,
+            reply_markup=InlineKeyboardMarkup(kb),
             parse_mode='Markdown',
             disable_web_page_preview=True
         )
     except Exception as e:
         print(f"Error: {e}")
         await query.message.edit_text(
-            text1,
-            reply_markup=InlineKeyboardMarkup(kb1),
+            text,
+            reply_markup=InlineKeyboardMarkup(kb),
             disable_web_page_preview=True
         )
-    
-    # Send Message 2 (new message)
-    await query.message.reply_text(
-        text2,
-        reply_markup=InlineKeyboardMarkup(kb2),
-        parse_mode='Markdown',
-        disable_web_page_preview=True
-    )
 
 async def decor_show_page(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Switch between decor package pages"""
@@ -1383,7 +1345,7 @@ async def decor_show_page(update: Update, context: ContextTypes.DEFAULT_TYPE):
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
         ]
     
-    # Edit the message
+    # Edit the SAME message (not send a new one)
     try:
         await query.message.edit_text(
             text,

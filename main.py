@@ -263,15 +263,11 @@ async def show_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, lang: st
 CONTENT = {
     'en': {
         'welcome': (
-            "🎁 *Welcome to AGOS Surprise Packages* 🌸\n\n"
-            "🎈 *DECORATION PACKAGES*\n"
-            "Beautiful home & hospital surprise decor packages to celebrate your special arrival.\n\n"
-            "📸 *PHOTOGRAPHY & VIDEOGRAPHY*\n"
-            "Capture your precious moments with our professional photography and videography packages.\n\n"
-            "🚗 *LIMOUSINE SERVICE*\n"
-            "Arrive in style and comfort with our special limousine service for new mothers.\n\n"
+            "🎁 *Welcome to AGOS Decor & Special Services* 🌸\n\n"
+            "✨ Premium home decor for your special moments\n"
+            "🚗 Luxury limousine arrivals\n"
+            "📸 Professional photography & videography\n\n"
             "🌐 www.agospostpartumcare.com\n\n"
-            "*Care. Comfort. Celebrate.*\n\n"
             "_Making your celebrations unforgettable._"
         ),
         'btns': ["🎁 Decor Packages", "🚗 Limousine Service", "📸 Photography Services", "📞 Contact Us", "📋 Services Catalog"],
@@ -447,25 +443,18 @@ CONTENT = {
         ),
         
         'contact_text': (
-            "📞 *Contact Us*\n\n"
-            "⏰ *Working Hours*\n"
-            "We're available 8:00 AM - 8:00 PM\n\n"
-            "⚠️ 🤖 Bot is offline during these hours - please call us⚠️\n\n"
-            "📞 *Phone*\n"
-            "Call us for immediate assistance\n"
+            "📞 ••Contact Us••\n\n"
+            "⏰ •Working Hours:• 8:00 AM - 8:00 PM (Local Time)\n"
+            "⚠️ •Note:• Bot is offline during working hours - please call us\n\n"
+            "📞 ••Phone:•• \n\n"
             "📱 +251 967 621 545\n"
             "📱 +251 980 040 468\n\n"
-            "📱 *Telegram*\n"
-            "Reach us directly on Telegram\n"
-            "@Agospostpartumcare\n"
-            "@Agospostpartumcare0\n\n"
-            "🎵 *Follow Us*\n"
-            "📸 Instagram: (instagram.com/agos_postpartumcare)\n"
-            "🎵 TikTok: (tiktok.com/@Agos_postpartumCare)\n"
-            "📱 Telegram: (t.me/Agospostpartumcare0)\n"
-            "🌐 Website: [www.agospostpartumcare.com]\n"
-            "📍 Location: Piassa, Abat Commercial\n"
-            "[View on Map](https://maps.app.goo.gl/mHDvo7CpFwUubWyx6)"
+            "🎵 ••Follow us on :••\n"
+            "📸 •Instagram: (https://instagram.com/agos_postpartumcare)\n"
+            "🎵 •TikTok: (https://www.tiktok.com/@Agos_postpartumCare)\n"
+            "📱 •Telegram: (https://t.me/Agospostpartumcare0)\n"
+            "🌐 •Website: [www.agospostpartumcare.com]\n"
+            "📍 •Location: [Piassa, Abat Commercial](https://maps.app.goo.gl/mHDvo7CpFwUubWyx6)"
         ),
         'agree_btn': "I Agree ✅",
         'back': "🔙 Back to Menu",
@@ -504,14 +493,11 @@ CONTENT = {
     },
     'am': {
         'welcome': (
-            "🎁 *እንኳን ወደ AGOS ሰርፕራይዝ ጥቅሎች በሰላም መጡ* 🌸\n\n"
-            "🎈 *የዲኮር ፓኬጆች*\n"
-            "ልዩ የቤት እና የሆስፒታል ሰርፕራይዝ ዲኮር ፓኬጅ። \n\n"
-            "📸 *ፎቶግራፍ እና ቪዲዮግራፊ*\n"
-            "ውድ ትዝታዎችዎን በባለሙያ የፎቶግራፍ እና የቪዲዮግራፍ ጥቅሎቻችን ይቅረጹ።\n\n"
-            "🚗 *የሊሙዚን አገልግሎት*\n"
-            "ለአዳዲስ እናቶች በተዘጋጀ ልዩ የሊሙዚን አገልግሎት በምቾት ወደ ቤትዎ ይግቡ።\n\n"
-            "🌐 www.agospostpartumcare.com \n\n"
+            "🎁 *እንኳን ወደ AGOS ዲኮር እና ልዩ አገልግሎቶች በሰላም መጡ* 🌸\n\n"
+            "✨ ልዩ የቤት እና የሆስፒታል ሰርፕራይዝ ዲኮር ፓኬጅ \n"
+            "🚗 ለአዳዲስ እናቶች የተዘጋጀ ልዩ የሊሙዚን አገልግሎት \n"
+            "📸 ፕሮፌሽናል የፎቶግራፍ እና የቪዲዮግራፍ ጥቅሎች \n\n"
+            "🌐 www.agospostpartumcare.com"
         ),
         'btns': ["🎁 የዲኮር ፓኬጆች", "🚗 የሊሙዚን አገልግሎት", "📸 የፎቶግራፍ አገልግሎቶች", "📞 ያግኙን", "📋 የአገልግሎት ዝርዝር"],
         
@@ -675,26 +661,18 @@ CONTENT = {
         ),
         
         'contact_text': (
-            "📞 *ያግኙን* 📞\n\n"
-            "⏰ *የስራ ሰዓት*\n"
-            "ከ ጥዋት 2፡00 ሰዓት  - ማታ 2፡00 ሰዓት  \n"
-            "⚠️ *ማሳሰቢያ* 🤖 ቦቱ በስራ ሰዓት አይሰራም አይሰራም - እባክዎ ይደውሉልን\n\n"
-            "📞 *ስልክ* \n\n"
-            "ለፈጣን እርዳታ እባክዎን ይደውሉልን\n"
+            "📞 ••ያግኙን••\n\n"
+            "⏰ •የስራ ሰዓት: 2፡00 ጥዋት - 2፡00 ማታ (በአካባቢው ሰዓት)\n"
+            "⚠️ •ማሳሰቢያ: ቦት በስራ ሰዓት አይሰራም - እባክዎ ይደውሉልን\n\n"
+            "📞 ••ስልክ:•• \n\n"
             "📱 +251 967 621 545\n"
             "📱 +251 980 040 468\n\n"
-            "📱 *ቴሌግራም*\n"
-            "በቴሌግራም በቀጥታ ያግኙን\n"
-            "@Agospostpartumcare\n"
-            "@Agospostpartumcare0\n\n"
-            "🎵 የሶሻል ሚዲያ ገፃችንን ይጎብኙ :\n"
-            "📸 ኢንስታግራም: (https://instagram.com/agos_postpartumcare)\n"
-            "🎵 ቲክቶክ: (https://www.tiktok.com/@Agos_postpartumCare)\n"
-            "📱 ቴሌግራም: (https://t.me/Agospostpartumcare0)\n"
-            "🌐 ዌብሳይት: [www.agospostpartumcare.com]\n"
-            "📍 *አድራሻ*\n"
-            "በፒያሳ፣ አባት ኮሜርሻል ይጎብኙን\n"
-            "[ካርታ ለማየት](https://maps.app.goo.gl/mHDvo7CpFwUubWyx6)"
+            "🎵 •• የሶሻል ሚዲያ ገፃችንን ይጎብኙ :••\n"
+            "📸 •ኢንስታግራም: (https://instagram.com/agos_postpartumcare)\n"
+            "🎵 •ቲክቶክ: (https://www.tiktok.com/@Agos_postpartumCare)\n"
+            "📱 •ቴሌግራም: (https://t.me/Agospostpartumcare0)\n"
+            "🌐 •ዌብሳይት: [www.agospostpartumcare.com]\n"
+            "📍 •አድራሻ: [ፒያሳ፣ አባት ኮሜርሻል](https://maps.app.goo.gl/mHDvo7CpFwUubWyx6)"
         ),
         'agree_btn': "እስማማለሁ ✅",
         'back': "🔙 ወደ ዋና ማውጫ",

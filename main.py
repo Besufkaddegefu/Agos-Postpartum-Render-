@@ -1209,90 +1209,193 @@ async def show_discover_more(update: Update, context: ContextTypes.DEFAULT_TYPE,
     )
 
 # --- PACKAGE DISPLAY FUNCTIONS ---
-# --- PACKAGE DISPLAY FUNCTIONS ---
 async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
     
-    # Correctly identify the user's language
     lang = context.user_data.get('lang', 'en')
     
-    # Debug prints to verify
-    print(f"🔍 DEBUG - Showing decor packages in language: {lang}")
-    print(f"🔍 DEBUG - Amharic decor_basic exists: {'decor_basic' in CONTENT['am']}")
-    
-    # Pull the pieces from your dictionary
-    # basic = CONTENT[lang]['decor_basic']
-    # deluxe = CONTENT[lang]['decor_deluxe']
-    # premium = CONTENT[lang]['decor_premium']
+    # Get all 5 package descriptions
     basic = CONTENT[lang]['decor_basic']
     deluxe = CONTENT[lang]['decor_deluxe']
     mid = CONTENT[lang]['decor_mid']
     premium = CONTENT[lang]['decor_premium']
     special = CONTENT[lang]['decor_special']
     
-    # Combine them into one text string based on language
+    # ====== MESSAGE 1: First 3 Packages (Basic, Deluxe, Mid) ======
     if lang == 'en':
-        text = (
+        text1 = (
             f"{basic}\n\n"
             "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
             f"{deluxe}\n\n"
             "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
             f"{mid}\n\n"
-            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"{premium}\n\n"
-            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"{special}\n\n"
-            "👇 *Choose a package to book:*"
+            "👇 *Book these packages below:*"
         )
     else:
-        text = (
+        text1 = (
             f"{basic}\n\n"
             "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
             f"{deluxe}\n\n"
             "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
             f"{mid}\n\n"
-            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"{premium}\n\n"
-            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
-            f"{special}\n\n"
-            "👇 *ለማዘዝ አንዱን ይምረጡ፦*"
+            "👇 *ከታች ያሉትን ፓኬጆች ይዘዙ:*"
         )
-
-    # Dynamic buttons that change based on language
+    
+    # Buttons for Message 1
     if lang == 'en':
-        kb = [
-            [InlineKeyboardButton("🏥 Book Hospital - 10,000 ETB", callback_data='d_start_10k')],
-            [InlineKeyboardButton("🛋️ Book Home Decor - 15,000 ETB", callback_data='d_start_15k')],
-            [InlineKeyboardButton("💎 Book Deluxe - 20,000 ETB", callback_data='d_start_20k')],
-            [InlineKeyboardButton("👑 Book Premium - 25,000 ETB", callback_data='d_start_25k')],
-            [InlineKeyboardButton("⭐ Book Special - 48,000 ETB", callback_data='d_start_48k')],
+        kb1 = [
+            [InlineKeyboardButton("📝 Book Basic - 10,000 ETB", callback_data='d_start_10k')],
+            [InlineKeyboardButton("📝 Book Home - 15,000 ETB", callback_data='d_start_15k')],
+            [InlineKeyboardButton("📝 Book Deluxe - 20,000 ETB", callback_data='d_start_20k')],
+            [InlineKeyboardButton("➡️ Next: Premium & Special", callback_data='decor_show_page2')],
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
         ]
     else:
-        kb = [
-            [InlineKeyboardButton("🏥 የሆስፒታል ዲኮር - 10,000 ብር ይዘዙ", callback_data='d_start_10k')],
-            [InlineKeyboardButton("🛋️ የቤት ዲኮር - 15,000 ብር ይዘዙ", callback_data='d_start_15k')],
-            [InlineKeyboardButton("💎 ደልክስ ዲኮር - 20,000 ብር ይዘዙ", callback_data='d_start_20k')],
-            [InlineKeyboardButton("👑 ፕሪሚየም ዲኮር - 25,000 ብር ይዘዙ", callback_data='d_start_25k')],
-            [InlineKeyboardButton("⭐ ልዩ ዲኮር - 48,000 ብር ይዘዙ", callback_data='d_start_48k')],
+        kb1 = [
+            [InlineKeyboardButton("📝 መሰረታዊ ይዘዙ - 10,000 ብር", callback_data='d_start_10k')],
+            [InlineKeyboardButton("📝 የቤት ይዘዙ - 15,000 ብር", callback_data='d_start_15k')],
+            [InlineKeyboardButton("📝 ደልክስ ይዘዙ - 20,000 ብር", callback_data='d_start_20k')],
+            [InlineKeyboardButton("➡️ ቀጣይ: ፕሪሚየም እና ልዩ", callback_data='decor_show_page2')],
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
         ]
     
+    # ====== MESSAGE 2: Last 2 Packages (Premium, Special) ======
+    if lang == 'en':
+        text2 = (
+            f"{premium}\n\n"
+            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"{special}\n\n"
+            "👇 *Book these packages below:*"
+        )
+    else:
+        text2 = (
+            f"{premium}\n\n"
+            "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+            f"{special}\n\n"
+            "👇 *ከታች ያሉትን ፓኬጆች ይዘዙ:*"
+        )
+    
+    # Buttons for Message 2
+    if lang == 'en':
+        kb2 = [
+            [InlineKeyboardButton("📝 Book Premium - 25,000 ETB", callback_data='d_start_25k')],
+            [InlineKeyboardButton("📝 Book Special - 48,000 ETB", callback_data='d_start_48k')],
+            [InlineKeyboardButton("⬅️ Back to Basic Packages", callback_data='decor_show_page1')],
+            [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
+        ]
+    else:
+        kb2 = [
+            [InlineKeyboardButton("📝 ፕሪሚየም ይዘዙ - 25,000 ብር", callback_data='d_start_25k')],
+            [InlineKeyboardButton("📝 ልዩ ይዘዙ - 48,000 ብር", callback_data='d_start_48k')],
+            [InlineKeyboardButton("⬅️ ወደ መሰረታዊ ፓኬጆች", callback_data='decor_show_page1')],
+            [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
+        ]
+    
+    # Send Message 1 (edit the existing message)
     try:
-        # We use Markdown because your content uses [video](link)
         await query.message.edit_text(
-            text, 
-            reply_markup=InlineKeyboardMarkup(kb), 
-            parse_mode='Markdown', 
+            text1,
+            reply_markup=InlineKeyboardMarkup(kb1),
+            parse_mode='Markdown',
             disable_web_page_preview=True
         )
     except Exception as e:
-        print(f"Markdown error: {e}")
-        # Fallback: if there's any weird character, show it as plain text
+        print(f"Error: {e}")
         await query.message.edit_text(
-            text, 
-            reply_markup=InlineKeyboardMarkup(kb), 
+            text1,
+            reply_markup=InlineKeyboardMarkup(kb1),
+            disable_web_page_preview=True
+        )
+    
+    # Send Message 2 (new message)
+    await query.message.reply_text(
+        text2,
+        reply_markup=InlineKeyboardMarkup(kb2),
+        parse_mode='Markdown',
+        disable_web_page_preview=True
+    )
+
+async def decor_show_page(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Switch between decor package pages"""
+    query = update.callback_query
+    await query.answer()
+    lang = context.user_data.get('lang', 'en')
+    
+    basic = CONTENT[lang]['decor_basic']
+    deluxe = CONTENT[lang]['decor_deluxe']
+    mid = CONTENT[lang]['decor_mid']
+    premium = CONTENT[lang]['decor_premium']
+    special = CONTENT[lang]['decor_special']
+    
+    # If user clicked "Back to Basic Packages"
+    if query.data == 'decor_show_page1':
+        # Show Page 1 (Basic, Deluxe, Mid)
+        if lang == 'en':
+            text = (
+                f"{basic}\n\n"
+                "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                f"{deluxe}\n\n"
+                "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                f"{mid}\n\n"
+                "👇 *Book these packages below:*"
+            )
+        else:
+            text = (
+                f"{basic}\n\n"
+                "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                f"{deluxe}\n\n"
+                "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                f"{mid}\n\n"
+                "👇 *ከታች ያሉትን ፓኬጆች ይዘዙ:*"
+            )
+        
+        kb = [
+            [InlineKeyboardButton("📝 Book Basic - 10,000 ETB", callback_data='d_start_10k')],
+            [InlineKeyboardButton("📝 Book Home - 15,000 ETB", callback_data='d_start_15k')],
+            [InlineKeyboardButton("📝 Book Deluxe - 20,000 ETB", callback_data='d_start_20k')],
+            [InlineKeyboardButton("➡️ Next: Premium & Special", callback_data='decor_show_page2')],
+            [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
+        ]
+    
+    # If user clicked "Next: Premium & Special"
+    else:  # decor_show_page2
+        # Show Page 2 (Premium, Special)
+        if lang == 'en':
+            text = (
+                f"{premium}\n\n"
+                "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                f"{special}\n\n"
+                "👇 *Book these packages below:*"
+            )
+        else:
+            text = (
+                f"{premium}\n\n"
+                "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                f"{special}\n\n"
+                "👇 *ከታች ያሉትን ፓኬጆች ይዘዙ:*"
+            )
+        
+        kb = [
+            [InlineKeyboardButton("📝 Book Premium - 25,000 ETB", callback_data='d_start_25k')],
+            [InlineKeyboardButton("📝 Book Special - 48,000 ETB", callback_data='d_start_48k')],
+            [InlineKeyboardButton("⬅️ Back to Basic Packages", callback_data='decor_show_page1')],
+            [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
+        ]
+    
+    # Edit the message
+    try:
+        await query.message.edit_text(
+            text,
+            reply_markup=InlineKeyboardMarkup(kb),
+            parse_mode='Markdown',
+            disable_web_page_preview=True
+        )
+    except Exception as e:
+        print(f"Error: {e}")
+        await query.message.edit_text(
+            text,
+            reply_markup=InlineKeyboardMarkup(kb),
             disable_web_page_preview=True
         )
 
@@ -2378,6 +2481,7 @@ if __name__ == '__main__':
     app.add_handler(CallbackQueryHandler(view_decor_premium, pattern='^view_decor_premium$'))
     app.add_handler(CallbackQueryHandler(view_decor_mid, pattern='^view_decor_mid$'))
     app.add_handler(CallbackQueryHandler(view_decor_special, pattern='^view_decor_special$'))
+    app.add_handler(CallbackQueryHandler(decor_show_page, pattern='^decor_show_page'))  # ← ADD THIS LINE
     
     app.add_handler(CallbackQueryHandler(view_limo_grand, pattern='^view_limo_grand$'))
     app.add_handler(CallbackQueryHandler(view_limo_special, pattern='^view_limo_special$'))

@@ -542,70 +542,70 @@ CONTENT = {
         
         # Individual Decor Package Pages with Book Buttons (Amharic)
         'decor_basic': (
-            "🔸 *ልዩ (Special) የሆስፒታል ዲኮር (10,000 ብር)*\n"
+            "🔸 <b>ልዩ (Special) የሆስፒታል ዲኮር (10,000 ብር)</b>\n"
             "__________________________\n\n"
             "• ለየት ያሉ እና ብዙ ቦታ ያልተለመዱ ልዩ የፊኛ ዝግጅት\n"
             "• (Welcome) የዌልካም ቤቢ ባሎን\n"
             "• የመሬት ዲኮር (መሬቱን በተፈጥሮ አበቦች ማስዋብ)\n"
             "• መካከለኛ መጠን ያለው እቅፍ አበባ\n"
             "• ለ ስምንት ሰአታት አየር ላይ መንሳፈፍ የሚችሉ በሂልየም ጋዝ የተሞሉ ፊኛዎች\n\n"
-            "📱 *👇👇👇ከዚህ በፊት በ 10,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇*:\n\n"
-            "[1](https://shorturl.at/BObi6) | "
-            "[2](https://shorturl.at/92EKH)\n\n"
-            "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ*: https://www.tiktok.com/@agos_postpartumcare"
+            "📱 <b>👇👇👇ከዚህ በፊት በ 10,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:</b>\n"
+            "<a href='https://shorturl.at/BObi6'>1</a> | "
+            "<a href='https://shorturl.at/92EKH'>2</a>\n\n"
+            "👉 <b>ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ</b>: <a href='https://www.tiktok.com/@agos_postpartumcare'>@agos_postpartumcare</a>"
         ),
         'decor_deluxe': (
-            "🔸 *የቤት ዲኮር ፓኬጅ (15,000 ብር)*\n"
+            "🔸 <b>የቤት ዲኮር ፓኬጅ (15,000 ብር)</b>\n"
             "__________________________\n\n"
             "• የመኝታ ቤት ዲኮር\n"
             "• የወለል ዲኮር\n"
             "• የኮሪደር ዲኮር\n"
             "• የሳሎን ዲኮር\n\n"
-            "📱 *👇👇👇ከዚህ በፊት በ 10,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇*:\n\n"
-            "[1](https://shorturl.at/fdSwE) | "
-            "[2](https://shorturl.at/itgVZ) | "
-            "[3](https://shorturl.at/kAPHt) | "
-            "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ*: https://www.tiktok.com/@agos_postpartumcare"
-        ),
+            "📱 <b>👇👇👇ከዚህ በፊት በ 15,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:</b>\n"
+            "<a href='https://shorturl.at/fdSwE'>1</a> | "
+            "<a href='https://shorturl.at/itgVZ'>2</a> | "
+            "<a href='https://shorturl.at/kAPHt'>3</a>\n\n"
+            "👉 <b>ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ</b>: <a href='https://www.tiktok.com/@agos_postpartumcare'>@agos_postpartumcare</a>"
+),
         'decor_mid': (
-            "💎 *ዴሉክስ ዲኮር (20,000 ብር)*\n"
+            "💎 <b>ዴሉክስ ዲኮር (20,000 ብር)</b>\n"
             "__________________________\n\n"
             "• የመኝታ ቤት ዲኮር\n"
             "• የኮሪደር ዲኮር\n"
             "• የሳሎን ዲኮር\n"
             "• መካከለኛ መጠን ያለው እቅፍ አበባ እናየመሬት አበባ\n"
             "• ሁለት (2) ኪሎ መደበኛ ኬክ\n\n"
-            "📱 *👇👇👇ከዚህ በፊት በ 10,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇*:\n\n"
-            "[1](https://l1nk.dev/7dr6vom) | "
-            "[2](https://l1nk.dev/bu860k9) | "
-            "[3](https://acesse.one/wuasbfi) | "
-            "[4](https://short.do/yIUfyu) | "
-            "[5](https://acesse.one/a49c8z7)\n\n"
-            "[6](https://short.do/Tpvgp_)\n\n"
-            "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ*: https://www.tiktok.com/@agos_postpartumcare"
+            "📱 <b>👇👇👇ከዚህ በፊት በ 20,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:</b>\n"
+            "<a href='https://l1nk.dev/7dr6vom'>1</a> | "
+            "<a href='https://l1nk.dev/bu860k9'>2</a> | "
+            "<a href='https://acesse.one/wuasbfi'>3</a> | "
+            "<a href='https://short.do/yIUfyu'>4</a> | "
+            "<a href='https://acesse.one/a49c8z7'>5</a>\n\n"
+            "<a href='https://short.do/Tpvgp_'>6</a>\n\n"
+            "👉 <b>ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ</b>: <a href='https://www.tiktok.com/@agos_postpartumcare'>@agos_postpartumcare</a>"
         ),
         'decor_premium': (
-            "👑 *ፕሪሚየም የቤት ዲኮር (25,000 ብር)*\n"
+            "👑 <b>ፕሪሚየም የቤት ዲኮር (25,000 ብር)</b>\n"
             "__________________________\n\n"
             "• የመኝታ ቤት ዲኮር \n"
             "• የአልጋ ዲኮር → የ2 ሳምንት የአጎበር ክራይ\n"
             "• የኮሪደር እና ሳሎን ዲኮር\n"
             "• ትልቅ መጠን ያለው እቅፍ አበባ እና የመሬትአበባ\n"
             "• ሁለት (2) ኪሎ ኬክ በመረጡት ዲዛይን\n\n"
-            "📱 *👇👇👇ከዚህ በፊት በ 10,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇*:\n\n"
-            "[1](https://acesse.one/euoqzqe) | "
-            "[2](https://l1nk.dev/mrp2t8o) | "
-            "[3](https://acesse.one/ixazz0n) | "
-            "[4](https://l1nk.dev/ou79x8q) | "
-            "[5](https://short.do/oHBlnR) | "
-            "[6](https://short.do/gvsPGl) | "
-            "[7](https://acesse.one/p52mu20) | "
-            "[8](https://l1nk.dev/lmz8t3g) | "
-            "[9](https://acesse.one/w9xdl1x) | "
-            "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ*: https://www.tiktok.com/@agos_postpartumcare"
+            "📱 <b>👇👇👇ከዚህ በፊት በ 25,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:</b>\n"
+            "<a href='https://acesse.one/euoqzqe'>1</a> | "
+            "<a href='https://l1nk.dev/mrp2t8o'>2</a> | "
+            "<a href='https://acesse.one/ixazz0n'>3</a> | "
+            "<a href='https://l1nk.dev/ou79x8q'>4</a> | "
+            "<a href='https://short.do/oHBlnR'>5</a> | "
+            "<a href='https://short.do/gvsPGl'>6</a> | "
+            "<a href='https://acesse.one/p52mu20'>7</a> | "
+            "<a href='https://l1nk.dev/lmz8t3g'>8</a> | "
+            "<a href='https://acesse.one/w9xdl1x'>9</a>\n\n"
+            "👉 <b>ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ</b>: <a href='https://www.tiktok.com/@agos_postpartumcare'>@agos_postpartumcare</a>"
         ),
         'decor_special': (
-            "⭐ *ልዩ የቤት ዲኮር (48,000 ብር)*\n"
+            "⭐ <b>ልዩ የቤት ዲኮር (48,000 ብር)</b>\n"
             "__________________________\n\n"
             "• ሙሉ የመኝታ ቤት ዲኮር\n"
             "• ሙሉ የኮሪደር ዲኮር\n"
@@ -617,11 +617,11 @@ CONTENT = {
             "• ለ ስምንት ሰአታት አየር ላይ መንሳፈፍ የሚችሉ በሂልየም ጋዝ የተሞሉ ፊኛዎች\n"
             "• ፕሮግራሙን የማይረሳ ለማድረግ ከአልኮል ነፃ የሆነ ሻምፓኝ \n\n"
             "• በተለያዩ መጠኖች የተሰራ የፊኛ እቅፍ\n\n"
-            "✨ *የበለጠ ልዩ ልምድ!*\n\n" 
-            "📱 *👇👇👇ከዚህ በፊት በ 10,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇*:\n\n"
-            "[1](https://acesse.one/z8tmcmg) | "
-            "[2](https://acesse.one/nb4rfw2) | "
-            "👉 *ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ*: https://www.tiktok.com/@agos_postpartumcare"
+            "✨ <b>የበለጠ ልዩ ልምድ!</b>\n\n" 
+            "📱 <b>👇👇👇ከዚህ በፊት በ 48,000 ብር የሰራናቸዉን ስራዎች ይመልከቱ 👇👇👇:</b>\n"
+            "<a href='https://acesse.one/z8tmcmg'>1</a> | "
+            "<a href='https://acesse.one/nb4rfw2'>2</a>\n\n"
+            "👉 <b>ለተጨማሪ ቪዲዮዎች የቲክቶክ ገፃችንን ይጎብኙ</b>: <a href='https://www.tiktok.com/@agos_postpartumcare'>@agos_postpartumcare</a>"
         ),
         
         # Limousine Package Pages with Book Buttons (Amharic)
@@ -1461,10 +1461,13 @@ async def view_decor_basic(update: Update, context: ContextTypes.DEFAULT_TYPE):
         [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
     ]
     
+    # Use HTML for Amharic, Markdown for English
+    parse_mode = 'HTML' if lang == 'am' else 'Markdown'
+    
     await query.message.edit_text(
         CONTENT[lang]['decor_basic'],
         reply_markup=InlineKeyboardMarkup(kb),
-        parse_mode='Markdown'
+        parse_mode=parse_mode
     )
 
 async def view_decor_deluxe(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -1480,29 +1483,12 @@ async def view_decor_deluxe(update: Update, context: ContextTypes.DEFAULT_TYPE):
         [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
     ]
     
+    parse_mode = 'HTML' if lang == 'am' else 'Markdown'
+    
     await query.message.edit_text(
         CONTENT[lang]['decor_deluxe'],
         reply_markup=InlineKeyboardMarkup(kb),
-        parse_mode='Markdown'
-    )
-
-async def view_decor_premium(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    query = update.callback_query
-    await query.answer()
-    lang = context.user_data.get('lang', 'en')
-    
-    back_text = "🔙 Back to Packages" if lang == 'en' else "🔙 ወደ ፓኬጆች ተመለስ"
-    
-    kb = [
-        [InlineKeyboardButton(CONTENT[lang]['book_now'], callback_data='d_start_premium')],
-        [InlineKeyboardButton(back_text, callback_data='show_decor_packages')],
-        [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
-    ]
-    
-    await query.message.edit_text(
-        CONTENT[lang]['decor_premium'],
-        reply_markup=InlineKeyboardMarkup(kb),
-        parse_mode='Markdown'
+        parse_mode=parse_mode
     )
 
 async def view_decor_mid(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -1518,10 +1504,33 @@ async def view_decor_mid(update: Update, context: ContextTypes.DEFAULT_TYPE):
         [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
     ]
     
+    parse_mode = 'HTML' if lang == 'am' else 'Markdown'
+    
     await query.message.edit_text(
         CONTENT[lang]['decor_mid'],
         reply_markup=InlineKeyboardMarkup(kb),
-        parse_mode='Markdown'
+        parse_mode=parse_mode
+    )
+
+async def view_decor_premium(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    query = update.callback_query
+    await query.answer()
+    lang = context.user_data.get('lang', 'en')
+    
+    back_text = "🔙 Back to Packages" if lang == 'en' else "🔙 ወደ ፓኬጆች ተመለስ"
+    
+    kb = [
+        [InlineKeyboardButton(CONTENT[lang]['book_now'], callback_data='d_start_premium')],
+        [InlineKeyboardButton(back_text, callback_data='show_decor_packages')],
+        [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
+    ]
+    
+    parse_mode = 'HTML' if lang == 'am' else 'Markdown'
+    
+    await query.message.edit_text(
+        CONTENT[lang]['decor_premium'],
+        reply_markup=InlineKeyboardMarkup(kb),
+        parse_mode=parse_mode
     )
 
 async def view_decor_special(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -1537,10 +1546,12 @@ async def view_decor_special(update: Update, context: ContextTypes.DEFAULT_TYPE)
         [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
     ]
     
+    parse_mode = 'HTML' if lang == 'am' else 'Markdown'
+    
     await query.message.edit_text(
         CONTENT[lang]['decor_special'],
         reply_markup=InlineKeyboardMarkup(kb),
-        parse_mode='Markdown'
+        parse_mode=parse_mode
     )
 
 

@@ -72,8 +72,6 @@ def is_within_working_hours():
     
     # # Return True if within working hours (bot should be OFFLINE)
     # return WORKING_HOURS_START <= current_hour < WORKING_HOURS_END
-
-# --- WORKING HOURS CHECK ---
 # def is_within_working_hours():
 #     """
 #     Check if current time is within working hours (8 AM - 8 PM LT)
@@ -193,19 +191,11 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         [InlineKeyboardButton("English 🇺🇸", callback_data='lang_en')],
         [InlineKeyboardButton("አማርኛ 🇪🇹", callback_data='lang_am')]
     ]
-
-    message_text = "🌿 Welcome! Choose Language / ቋንቋ ይምረጡ:"
-    if update.callback_query:
-        await update.callback_query.answer()
-        await update.callback_query.message.reply_text(
-            message_text,
-            reply_markup=InlineKeyboardMarkup(keyboard)
-        )
-    else:
-        await update.message.reply_text(
-            message_text, 
-            reply_markup=InlineKeyboardMarkup(keyboard)
-        )
+    
+    await update.message.reply_text(
+        "🌿 Welcome! Choose Language / ቋንቋ ይምረጡ:", 
+        reply_markup=InlineKeyboardMarkup(keyboard)
+    )
     return ConversationHandler.END
 
 # --- MODIFIED AFTER HOURS HANDLER ---
@@ -1197,14 +1187,18 @@ async def show_discover_more(update: Update, context: ContextTypes.DEFAULT_TYPE,
         reply_markup=InlineKeyboardMarkup(discover_buttons)
     )
 
+# --- PACKAGE DISPLAY FUNCTIONS ---   
 # --- PACKAGE DISPLAY FUNCTIONS ---
 async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Show all decor packages with view buttons"""
     query = update.callback_query
     await query.answer()
     
     # Correctly identify the user's language
     lang = context.user_data.get('lang', 'en')
+    
+    # Debug prints to verify
+    print(f"🔍 DEBUG - Showing decor packages in language: {lang}")
+    print(f"🔍 DEBUG - Amharic decor_basic exists: {'decor_basic' in CONTENT['am']}")
     
     # Pull the pieces from your dictionary
     basic = CONTENT[lang]['decor_basic']
@@ -1213,7 +1207,7 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
     premium = CONTENT[lang]['decor_premium']
     special = CONTENT[lang]['decor_special']
     
-    # Combine them into one text string
+    # Combine them into one text string based on language
     if lang == 'en':
         text = (
             f"{basic}\n\n"
@@ -1225,7 +1219,7 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
             f"{premium}\n\n"
             "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
             f"{special}\n\n"
-            "👇 *Choose a package to view details:*"
+            "👇 *Choose a package to book:*"
         )
     else:
         text = (
@@ -1238,30 +1232,31 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
             f"{premium}\n\n"
             "━━━━━━━━━━━━━━━━━━━━━━━━━\n\n"
             f"{special}\n\n"
-            "👇 *ዝርዝር ለማየት አንዱን ይምረጡ፦*"
+            "👇 *ለማዘዝ አንዱን ይምረጡ፦*"
         )
 
-    # ✅ FIX: Use view_decor_* callbacks for BOTH languages
+    # Dynamic buttons that change based on language
     if lang == 'en':
         kb = [
-            [InlineKeyboardButton("🔸 View Hospital - 10,000 ETB", callback_data='view_decor_basic')],
-            [InlineKeyboardButton("🛋️ View Home Decor - 15,000 ETB", callback_data='view_decor_deluxe')],
-            [InlineKeyboardButton("💎 View Deluxe - 20,000 ETB", callback_data='view_decor_mid')],
-            [InlineKeyboardButton("👑 View Premium - 25,000 ETB", callback_data='view_decor_premium')],
-            [InlineKeyboardButton("⭐ View Special - 48,000 ETB", callback_data='view_decor_special')],
+            [InlineKeyboardButton("🏥 Book Hospital - 10,000 ETB", callback_data='d_start_10k')],
+            [InlineKeyboardButton("🛋️ Book Home Decor - 15,000 ETB", callback_data='d_start_15k')],
+            [InlineKeyboardButton("💎 Book Deluxe - 20,000 ETB", callback_data='d_start_20k')],
+            [InlineKeyboardButton("👑 Book Premium - 25,000 ETB", callback_data='d_start_25k')],
+            [InlineKeyboardButton("⭐ Book Special - 48,000 ETB", callback_data='d_start_48k')],
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
         ]
     else:
         kb = [
-            [InlineKeyboardButton("🔸 ልዩ የሆስፒታል ዲኮር ይመልከቱ", callback_data='view_decor_basic')],
-            [InlineKeyboardButton("🛋️ የቤት ዲኮር ፓኬጅ ይመልከቱ", callback_data='view_decor_deluxe')],
-            [InlineKeyboardButton("💎 ዴሉክስ ዲኮር ይመልከቱ", callback_data='view_decor_mid')],
-            [InlineKeyboardButton("👑 ፕሪሚየም ዲኮር ይመልከቱ", callback_data='view_decor_premium')],
-            [InlineKeyboardButton("⭐ ልዩ ዲኮር ይመልከቱ", callback_data='view_decor_special')],
+            [InlineKeyboardButton("🏥 የሆስፒታል ዲኮር - 10,000 ብር ይዘዙ", callback_data='d_start_10k')],
+            [InlineKeyboardButton("🛋️ የቤት ዲኮር - 15,000 ብር ይዘዙ", callback_data='d_start_15k')],
+            [InlineKeyboardButton("💎 ደልክስ ዲኮር - 20,000 ብር ይዘዙ", callback_data='d_start_20k')],
+            [InlineKeyboardButton("👑 ፕሪሚየም ዲኮር - 25,000 ብር ይዘዙ", callback_data='d_start_25k')],
+            [InlineKeyboardButton("⭐ ልዩ ዲኮር - 48,000 ብር ይዘዙ", callback_data='d_start_48k')],
             [InlineKeyboardButton(CONTENT[lang]['back'], callback_data='menu')]
         ]
     
     try:
+        # We use Markdown because your content uses [video](link)
         await query.message.edit_text(
             text, 
             reply_markup=InlineKeyboardMarkup(kb), 
@@ -1270,6 +1265,7 @@ async def show_decor_packages(update: Update, context: ContextTypes.DEFAULT_TYPE
         )
     except Exception as e:
         print(f"Markdown error: {e}")
+        # Fallback: if there's any weird character, show it as plain text
         await query.message.edit_text(
             text, 
             reply_markup=InlineKeyboardMarkup(kb), 
@@ -2270,19 +2266,11 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         [InlineKeyboardButton("English 🇺🇸", callback_data='lang_en')],
         [InlineKeyboardButton("አማርኛ 🇪🇹", callback_data='lang_am')]
     ]
-
-    message_text = "🌿 Welcome! Choose Language / ቋንቋ ይምረጡ:"
-    if update.callback_query:
-        await update.callback_query.answer()
-        await update.callback_query.message.reply_text(
-            message_text,
-            reply_markup=InlineKeyboardMarkup(keyboard)
-        )
-    else:
-        await update.message.reply_text(
-            message_text,
-            reply_markup=InlineKeyboardMarkup(keyboard)
-        )
+    
+    await update.message.reply_text(
+        "🌿 Welcome! Choose Language / ቋንቋ ይምረጡ:", 
+        reply_markup=InlineKeyboardMarkup(keyboard)
+    )
     return ConversationHandler.END
 
 async def after_hours_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
